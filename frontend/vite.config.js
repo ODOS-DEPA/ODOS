@@ -32,6 +32,6 @@ export default defineConfig({
   server: {
     
     host: process.env.HOST||"0.0.0.0", // เปิดให้เข้าถึงจากที่อยู่ IP อื่น ๆ
-    port: process.env.FRONT_PORT||3000, // หรือเลือกพอร์ตที่ต้องการ
+    port: process.env.FRONT_PORT||11233, // หรือเลือกพอร์ตที่ต้องการ
   },
 });
