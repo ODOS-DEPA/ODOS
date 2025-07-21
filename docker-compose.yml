@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: nginx:alpine
+    volumes:
+      - ./frontend/dist:/usr/share/nginx/html
+      - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "3000:3000"
+    networks:
+      - mynetwork
+      
+  backend:
+    build:
+      # context ต้องเป็น root ( . ) เพื่อให้ Dockerfile เข้าถึงไฟล์ .env ได้
+      context: .
+      # ระบุ path ไปยัง Dockerfile ที่อยู่ในโฟลเดอร์ backend
+      dockerfile: ./backend/Dockerfile
+    ports:
+      - "3001:3001"
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
