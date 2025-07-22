@@ -19,7 +19,7 @@ services:
       dockerfile: ./backend/Dockerfile
     container_name: backend
     ports:
-      - "3306:3306"
+      - "80:80"
     networks:
       - mynetwork
 
