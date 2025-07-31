@@ -140,7 +140,6 @@ const ResultTable = ({ result }) => {
   const phone = getFieldValue(result, "เบอร์โทรศัพท์", "phone");
   const englishPass = getFieldValue(result, "englishPass", "EnglishPass");
   const digitalPass = getFieldValue(result, "digitalPass", "DigitalPass");
-
   // ตรวจสอบว่าสถานะเป็น "ผ่าน" หรือไม่
   // const isApproved = getStatusText(status) === "ผ่านการคัดเลือกครั้งที่ 1" ;
   // const isApproved = getStatusText(status) === "pass";
@@ -261,13 +260,13 @@ const ResultTable = ({ result }) => {
                       นามสกุล
                     </th>
                     <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
-                      Link
+                      เอกสารเพื่อทำสัญญา
                     </th>
                     <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
                       Upload
                     </th>
                     <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium">
-                      ผลการพิจารณา
+                      ผลการตรวจเอกสาร
                     </th>
                   </tr>
                 </thead>
@@ -288,21 +287,25 @@ const ResultTable = ({ result }) => {
                         {
                           boolFileTarget
                           ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} />
-                          : <div>ยังอยู่ระหว่างการตรวจสอบเอกสาร</div>
+                          : <div> เปิดให้ ดาวน์โหลด 5 สิงหาคม </div>
                           
-                        }
-                        {
-                          console.log("tt",boolFileTarget)
                         }
                       </div>
                     </td>
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
-                      <button className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs">
+                      {
+                        boolFileTarget
+                        ? <button className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs"
+                          onClick={() => window.location.href = "https://short.depa.or.th/N9lOh"}>
                         Upload
                       </button>
+                        : <div> เปิดให้ อัปโหลด 5 สิงหาคม </div>
+                      }
                     </td>
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm">
-                      รอการพิจารณา
+                      {result["ผลการตรวจเอกสาร"]}
+                      
+                      
                     </td>
                   </tr>
                 </tbody>
