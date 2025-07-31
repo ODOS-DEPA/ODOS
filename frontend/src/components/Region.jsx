@@ -56,7 +56,7 @@ function Region() {
               <RegionButton
                 handleModal={openModal}
                 countryCode={"Finland"}
-                imageArray={["/images/finland.jpg"]}
+                imageArray={["/images/finland.jpg", "/images/finland2.jpg"]}
               />
             
               <RegionButton

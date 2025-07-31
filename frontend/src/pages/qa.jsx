@@ -5,10 +5,10 @@ import { useState, useEffect } from "react";
 // import Navbar from "./components/Navbar";
 import Navbar_info from "../components/NavQA";
 import ScrollToTop from "../components/ScrollToTop";
-import NavbarTH from "../components/NavbarTH";
+
 import { Underline } from "lucide-react";
 import Footer from "../components/Footer";
-
+import NavbarTH from "../components/NavbarTH";
 function Qa() {
   return (
     <div className="LINESeed">

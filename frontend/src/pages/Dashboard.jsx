@@ -3,7 +3,6 @@ import Footer from "../components/Footer";
 import NavbarDashboard from "../components/NavbarDashboard";
 import NavbarTH from "../components/NavbarTH";
 function Dashboard() {
-
     return (
         <div className="LINESeed">
             <NavbarTH />

@@ -12,16 +12,16 @@ function Nav_info({ hideLanguageTranslator }) {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // ฟังก์ชันสำหรับสลับภาษา
+  
   const getLanguageLink = (targetLang) => {
     const currentPath = location.pathname;
     
     if (targetLang === 'EN') {
-      // ถ้าต้องการไป EN
+      
       if (currentPath === '/InfoTH') return '/Information';
       return '/Information';
     } else {
-      // ถ้าต้องการไป TH  
+       
       if (currentPath === '/Information') return '/InfoTH';
       return '/InfoTH';
     }

@@ -1,4 +1,4 @@
-import { StrictMode ,useEffect} from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Checkstatus from "./pages/Checkstatus.jsx";
@@ -16,9 +16,8 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Announcement from "./pages/Announcement.jsx";
 import Forgot from "./pages/forgetmail.jsx";
 import RandomInfoTH from "./pages/RandomSlot_TH.jsx";
+
 const root = createRoot(document.getElementById("root"));
-
-
 
 root.render(
   <StrictMode>
@@ -43,11 +42,11 @@ root.render(
         <Route path="/Announcement" element={<Announcement />} />
         <Route path="/forgetmail" element={<Forgot />} />
         <Route path="/Info2TH" element={<RandomInfoTH />} />
+
         {/* เส้นทางที่ต้องตรวจสอบ CAPTCHA */}
         <Route
   path="/check-status"
   element={
-    
     <Captcha>
       <Checkstatus />
     </Captcha>

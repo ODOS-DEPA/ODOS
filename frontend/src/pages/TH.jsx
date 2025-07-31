@@ -7,28 +7,8 @@ import ScrollToTop from "../components/ScrollToTop";
 import Region from "../components/Region";
 import Button from "../components/Button";
 import DeclarationTH from "../components/DeclareTH";
-import { useEffect } from "react";
-function TH() {
-    useEffect(() => {
-    const refreshedStep = sessionStorage.getItem("refreshedStep");
-    console.log("refreshedStep:", refreshedStep);
 
-    if (!refreshedStep) {
-        sessionStorage.setItem("refreshedStep", "1");
-        console.log(">> Refreshing: รอบที่ 1");
-        window.location.reload();
-    } else if (refreshedStep === "1") {
-        sessionStorage.setItem("refreshedStep", "2");
-        console.log(">> Refreshing: รอบที่ 2");
-        setTimeout(() => {
-            console.log("After 2 seconds");
-        }, 2000);
-        window.location.reload();
-    } else {
-        console.log("✅ ไม่รีเฟรชแล้ว (ครบ 2 รอบ)");
-        // do nothing
-    }
-    }, []);
+function TH() {
     return (
 
         <div className="LINESeed">
@@ -63,7 +43,7 @@ function TH() {
                 <TimelineTH />
             </div>
             <div>
-                <img src="/images/ODOS_Website_Partners.jpg" alt="" />
+                <img src="/images/ODOS Website_Partners_20072025_Partners_TH.jpg" alt="" />
             </div>
 
             <div className="flex flex-col">

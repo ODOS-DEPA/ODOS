@@ -37,7 +37,7 @@ function Home() {
         <Timeline />
       </div>
           <div>
-              <img src="/images/ODOS_Website_Partners_EN.jpg" alt="" /> 
+              <img src="/images/ODOS Website_Partners_20072025_Partners_EN.jpg" alt="" /> 
       </div>
       <div className="flex flex-col">
         <Footer />

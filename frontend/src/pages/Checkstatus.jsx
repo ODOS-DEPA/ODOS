@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react"; // ✅ ต้อง import useState
+import { useState ,useEffect} from "react"; // ✅ ต้อง import useState
 import Navbar from "../components/Navbar";
 import SearchForm from "../components/SearchForm";
 import ProgressSteps from "../components/ProgressSteps";
 import ResultTable from "../components/ResultTable";
-
 import NavbarTH from "../components/NavbarTH";
+
 const Checkstatus = () => {
   const [searchId, setSearchId] = useState("");
   const [verifyCode, setVerifyCode] = useState(""); // ใช้ verifyCode แทน phone
@@ -12,34 +12,25 @@ const Checkstatus = () => {
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
-
   const trimmedId = searchId.trim();
-const trimmedVerifyCode = verifyCode.trim();
-    useEffect(() => {
-    const refreshInterval = setInterval(() => {
-      window.location.reload(); // or use a cache-busting method
-    }, 21600000); // 6 hours  Unit ms
+  const trimmedVerifyCode = verifyCode.trim();
+  useEffect(() => {
+        const refreshedStep = sessionStorage.getItem("refreshedStep");
+        console.log("refreshedStep:", refreshedStep);
 
-    return () => clearInterval(refreshInterval);
+        if (!refreshedStep) {
+            sessionStorage.setItem("refreshedStep", "1");
+            console.log(">> Refreshing: รอบที่ 1");
+            window.location.reload();
+        } else if (refreshedStep === "1") {
+            sessionStorage.setItem("refreshedStep", "2");
+            console.log(">> Refreshing: รอบที่ 2");
+            window.location.reload();
+        } else {
+            console.log("✅ ไม่รีเฟรชแล้ว (ครบ 2 รอบ)");
+            // do nothing
+        }
     }, []);
-// useEffect(() => {
-//   const refreshedStep = sessionStorage.getItem("refreshedStep");
-//   console.log("refreshedStep:", refreshedStep);
-
-//   if (!refreshedStep) {
-//     sessionStorage.setItem("refreshedStep", "1");
-//     console.log(">> Refreshing: รอบที่ 1");
-//     window.location.reload();
-//   } else if (refreshedStep === "1") {
-//     sessionStorage.setItem("refreshedStep", "2");
-//     console.log(">> Refreshing: รอบที่ 2");
-//     window.location.reload();
-//   } else {
-//     console.log("✅ ไม่รีเฟรชแล้ว (ครบ 2 รอบ)");
-//     // do nothing
-//   }
-// }, []);
-
   const handleSearch = async (e) => {
     e.preventDefault();
 
