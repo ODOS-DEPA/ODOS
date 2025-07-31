@@ -1,8 +1,35 @@
-import React, { useState } from "react";
-
+import React, { useState , useEffect } from "react";
+import GoogleDriveLinkButton from "./GoogleDriveConfidentialDownload";
+import { getFileByName } from "./GoogleDriveConfidentialDownload";
 const ResultTable = ({ result }) => {
   const [showEnglishCode, setShowEnglishCode] = useState(false);
   const [showDigitalCode, setShowDigitalCode] = useState(false);
+  const [fileTarget, setFileTarget] = useState({});
+  const [boolFileTarget,setBoolFiletarget] = useState(false)
+//TODO: API CHECK CREDENTIAL
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const file = await getFileByName(`${applicantId}.pdf`);
+        console.log("Fetched file:", file);
+        setFileTarget(file);
+
+        // ✅ Use the fetched file directly
+        if (file && Object.keys(file).length > 0) {
+          setBoolFiletarget(true);
+        } else {
+          setBoolFiletarget(false);
+        }
+
+      } catch (err) {
+        console.error('Fetch error:', err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
 
   if (!result) return null;
 
@@ -257,8 +284,16 @@ const ResultTable = ({ result }) => {
                     </td>
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-center border-r border-gray-300">
                       <div className="flex flex-col items-center space-y-1">
-                        <LinkButton href="https://www.google.com">Link</LinkButton>
-                        <LinkButton href="https://www.google.com">Link</LinkButton>
+                        {/* <LinkButton href="https://www.google.com">Link</LinkButton> */}
+                        {
+                          boolFileTarget
+                          ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} />
+                          : <div>ยังอยู่ระหว่างการตรวจสอบเอกสาร</div>
+                          
+                        }
+                        {
+                          console.log("tt",boolFileTarget)
+                        }
                       </div>
                     </td>
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
