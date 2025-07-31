@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Checkstatus from "./pages/Checkstatus.jsx";
 import App from "./App.jsx";
+import Captcha from "./pages/Captcha.jsx";
 import List from "./pages/List.jsx";
 import "./index.css";
 import Maintenance from "./pages/Maintenance.jsx";
@@ -46,7 +47,9 @@ root.render(
         <Route
   path="/check-status"
   element={
+    //<Captcha>
     <Checkstatus />
+    //</Captcha>
   }
 />
 
