@@ -48,7 +48,7 @@ root.render(
   path="/check-status"
   element={
     //<Captcha>
-      <Checkstatus />
+    <Checkstatus />
     //</Captcha>
   }
 />
