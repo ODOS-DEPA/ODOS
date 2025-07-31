@@ -239,81 +239,8 @@ const ResultTable = ({ result }) => {
         </button>
       </div>
 
-      {/* ตารางรายงานตัวและทำสัญญา (สำหรับผู้ผ่านสอบสัมภาษณ์) */}
-      {getStatusText(status) === "ผ่านสอบสัมภาษณ์" && (
-        <div>
-          <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
-            รายงานตัวและทำสัญญา
-          </h3>
-          <div className="overflow-x-auto shadow-lg rounded-lg -mx-2 sm:mx-0 mb-6">
-            <div className="min-w-[800px] sm:min-w-0">
-              <table className="w-full bg-white border border-gray-200">
-                <thead className="bg-orange-400 text-white">
-                  <tr>
-                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
-                      รหัสผู้สมัคร
-                    </th>
-                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
-                      ชื่อ
-                    </th>
-                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
-                      นามสกุล
-                    </th>
-                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
-                      เอกสารเพื่อทำสัญญา
-                    </th>
-                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
-                      Upload
-                    </th>
-                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium">
-                      ผลการตรวจเอกสาร
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  <tr className="hover:bg-orange-50">
-                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-900 text-center font-medium border-r border-gray-300">
-                      {applicantId}
-                    </td>
-                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-900 text-center border-r border-gray-300">
-                      {firstName}
-                    </td>
-                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-900 text-center border-r border-gray-300">
-                      {lastName}
-                    </td>
-                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-center border-r border-gray-300">
-                      <div className="flex flex-col items-center space-y-1">
-                        {/* <LinkButton href="https://www.google.com">Link</LinkButton> */}
-                        {
-                          boolFileTarget
-                          ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} />
-                          : <div> เปิดให้ ดาวน์โหลด 5 สิงหาคม </div>
-                          
-                        }
-                      </div>
-                    </td>
-                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
-                      {
-                        boolFileTarget
-                        ? <button className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs"
-                          onClick={() => window.location.href = "https://short.depa.or.th/N9lOh"}>
-                        Upload
-                      </button>
-                        : <div> เปิดให้ อัปโหลด 5 สิงหาคม </div>
-                      }
-                    </td>
-                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm">
-                      {result["ผลการตรวจเอกสาร"]}
-                      
-                      
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      )}
+      
+
 
       {/* ตารางสำหรับการสมัครในบัตร */}
       <div>
@@ -500,7 +427,81 @@ const ResultTable = ({ result }) => {
           </div>
         </div>
       </div>
-
+      {/* ตารางรายงานตัวและทำสัญญา (สำหรับผู้ผ่านสอบสัมภาษณ์) */}
+      {getStatusText(status) === "ผ่านสอบสัมภาษณ์" && (
+        <div>
+          <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
+            รายงานตัวและทำสัญญา
+          </h3>
+          <div className="overflow-x-auto shadow-lg rounded-lg -mx-2 sm:mx-0 mb-6">
+            <div className="min-w-[800px] sm:min-w-0">
+              <table className="w-full bg-white border border-gray-200">
+                <thead className="bg-green-600 text-white">
+                  <tr>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
+                      รหัสผู้สมัคร
+                    </th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
+                      ชื่อ
+                    </th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
+                      นามสกุล
+                    </th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
+                      ดาวน์โหลดเอกสารเพื่อทำสัญญา
+                    </th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
+                      อัปโหลดเพื่อส่งตัวสัญญา<br/><a href="https://youtu.be/sohIhjnt3uc?si=AxHQzr5UUbexi7g-" className="text-white-500 underline hover:text-gray-300">{`${getStatusText(status)}`}<br/>วิธีการแสกนไฟล์</a>
+                    </th>
+                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium">
+                      ผลการตรวจเอกสาร
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr className="hover:bg-orange-50">
+                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-900 text-center font-medium border-r border-gray-300">
+                      {applicantId}
+                    </td>
+                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-900 text-center border-r border-gray-300">
+                      {firstName}
+                    </td>
+                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-900 text-center border-r border-gray-300">
+                      {lastName}
+                    </td>
+                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-center border-r border-gray-300">
+                      <div className="flex flex-col items-center space-y-1">
+                        {/* <LinkButton href="https://www.google.com">Link</LinkButton> */}
+                        {
+                          boolFileTarget
+                          ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} />
+                          : <div> เปิดให้ ดาวน์โหลด 5 สิงหาคม </div>
+                          
+                        }
+                      </div>
+                    </td>
+                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
+                      {
+                        boolFileTarget
+                        ? <button className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs"
+                          onClick={() => window.location.href = "https://short.depa.or.th/N9lOh"}>
+                        Upload
+                      </button>
+                        : <div> เปิดให้ อัปโหลด 5 สิงหาคม </div>
+                      }
+                    </td>
+                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm">
+                      {result["ผลการตรวจเอกสาร"]}
+                      
+                      
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      )}
       {/* ตารางสำหรับการสอบภาษาอังกฤษ - แสดงเฉพาะเมื่อสถานะเป็น "ผ่าน" */}
       {showEnglishAndDigitalTable && (
         <div>
