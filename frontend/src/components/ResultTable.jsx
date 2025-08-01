@@ -323,14 +323,7 @@ const ResultTable = ({ result }) => {
                             : "bg-yellow-100 text-yellow-800"
                         }`}
                       >
-                        <span className="block sm:hidden break-words hyphens-auto">
-                          {getStatusText(status)}
-                        </span>
-                        <span className="hidden sm:block whitespace-nowrap">
-                          {/* <a href="https://short.depa.or.th/QuU7C" className="text-white-500 underline hover:text-gray-300">
-                            {`${getStatusText(status)}`}<br/>
-                            {getStatusText(status) === "ผ่านสอบสัมภาษณ์" ? "คลิ้กที่นี่เพื่อยืนยันสิทธิ" : ""}
-                          </a> */}
+                        <span className="whitespace-pre-line">
                           {
                             getStatusText(status) === "ผ่านสอบสัมภาษณ์"
                             ? <a href="https://short.depa.or.th/QuU7C" className="text-white-500 underline hover:text-gray-300">{`${getStatusText(status)}`}<br/>คลิ้กที่นี่เพื่อยืนยันสิทธิ</a>
