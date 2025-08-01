@@ -486,7 +486,7 @@ const ResultTable = ({ result }) => {
                         {
                           boolFileTarget
                           ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} />
-                          : <div> เปิดให้ ดาวน์โหลด 5 สิงหาคม </div>
+                          : <div> เปิดให้ ดาวน์โหลด 4 สิงหาคม </div>
                           
                         }
                       </div>
@@ -498,7 +498,7 @@ const ResultTable = ({ result }) => {
                           onClick={() => window.location.href = "https://short.depa.or.th/N9lOh"}>
                         Upload
                       </button>
-                        : <div> เปิดให้ อัปโหลด 5 สิงหาคม </div>
+                        : <div> เปิดให้ อัปโหลด 4 สิงหาคม </div>
                       }
                     </td>
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm">
