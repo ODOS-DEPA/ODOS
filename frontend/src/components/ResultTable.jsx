@@ -248,7 +248,7 @@ const ResultTable = ({ result }) => {
           getStatusText(status) === "ผ่านสอบสัมภาษณ์"
           ? 
           <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
-            ยืนยัน/สละสิทธ์การเข้าร่วมโครงการ ( 1 ส.ค. 68 - 3 ส.ค. 68 )
+            ยืนยัน/สละสิทธ์การเข้าร่วมโครงการ ( 1 - 3 ส.ค. 68 )
           </h3>
           : 
           <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
