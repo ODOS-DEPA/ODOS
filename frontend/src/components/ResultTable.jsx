@@ -248,7 +248,7 @@ const ResultTable = ({ result }) => {
           getStatusText(status) === "ผ่านสอบสัมภาษณ์"
           ? 
           <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
-            ยืนยัน/สละสิทธ์การเข้าร่วมโครงการ ( 1 - 3 ส.ค. 68 )
+            ยืนยัน/สละสิทธ์การเข้าร่วมโครงการ (1 - 3 ส.ค. 68)
           </h3>
           : 
           <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
@@ -442,7 +442,7 @@ const ResultTable = ({ result }) => {
       {getStatusText(status) === "ผ่านสอบสัมภาษณ์" && (
         <div>
           <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
-            รายงานตัวและทำสัญญา
+            รายงานตัวและทำสัญญา (4 - 8 ส.ค. 68)
           </h3>
           <div className="overflow-x-auto shadow-lg rounded-lg -mx-2 sm:mx-0 mb-6">
             <div className="min-w-[800px] sm:min-w-0">
@@ -462,7 +462,7 @@ const ResultTable = ({ result }) => {
                       ดาวน์โหลดเอกสารเพื่อทำสัญญา
                     </th>
                     <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
-                      อัปโหลดเพื่อส่งตัวสัญญา<br/><a href="https://youtu.be/sohIhjnt3uc?si=AxHQzr5UUbexi7g-" className="text-white-500 underline hover:text-gray-300">{`${getStatusText(status)}`}<br/>วิธีการแสกนไฟล์</a>
+                      อัปโหลดเพื่อส่งตัวสัญญา<br/><a href="https://youtu.be/sohIhjnt3uc?si=AxHQzr5UUbexi7g-" className="text-white-500 underline hover:text-gray-300">วิธีการแสกนไฟล์</a>
                     </th>
                     <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium">
                       ผลการตรวจเอกสาร
