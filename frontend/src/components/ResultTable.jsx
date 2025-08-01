@@ -244,9 +244,19 @@ const ResultTable = ({ result }) => {
 
       {/* ตารางสำหรับการสมัครในบัตร */}
       <div>
-        <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
-          1.ข้อมูลการสมัคร (24 มิ.ย. - 16 มิ.ย. 68)
-        </h3>
+        {
+          getStatusText(status) === "ผ่านสอบสัมภาษณ์"
+          ? 
+          <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
+            ยืนยัน/สละสิทธ์การเข้าร่วมโครงการ ( 1 ส.ค. 68 - 3 ส.ค. 68 )
+          </h3>
+          : 
+          <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
+            ผลการสอบสัมภาษณ์
+          </h3>
+
+        }
+        
         <div className="overflow-x-auto shadow-lg rounded-lg -mx-2 sm:mx-0">
           <div className="min-w-[800px] sm:min-w-0">
             <table className="w-full bg-white border border-gray-200">
@@ -264,12 +274,13 @@ const ResultTable = ({ result }) => {
                   <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
                     สถานะ
                   </th>
-                  <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
+
+                  {/* <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
                     คลิปวีดีโอ
                   </th>
                   <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium">
                     เอกสาร
-                  </th>
+                  </th> */}
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
@@ -401,7 +412,7 @@ const ResultTable = ({ result }) => {
                       </div>
                     )}
                   </td>
-                  <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-center border-r border-gray-300">
+                  {/* <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-center border-r border-gray-300">
                     {vdoLink && vdoLink !== "#" ? (
                       <LinkButton href={vdoLink}>
                         <span className="block sm:hidden">วีดีโอ</span>
@@ -420,7 +431,7 @@ const ResultTable = ({ result }) => {
                     ) : (
                       <span className="text-gray-400 text-xs">ไม่มีลิงก์</span>
                     )}
-                  </td>
+                  </td> */}
                 </tr>
               </tbody>
             </table>
