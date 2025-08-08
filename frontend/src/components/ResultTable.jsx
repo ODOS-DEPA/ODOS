@@ -4,25 +4,37 @@ import { getFileByName } from "./GoogleDriveConfidentialDownload";
 const ResultTable = ({ result }) => {
   const [showEnglishCode, setShowEnglishCode] = useState(false);
   const [showDigitalCode, setShowDigitalCode] = useState(false);
-  const [fileTarget, setFileTarget] = useState({});
-  const [boolFileTarget, setBoolFiletarget] = useState(false);
+  const [contract,setcontract] = useState("contract");
+  const [absence,setabsence] = useState("absence");
+  const [boolFileTarget_contract, setBoolFiletarget_contract] = useState(false);
+  const [boolFileTarget_absence, setBoolFiletarget_absence] = useState(false);
   //TODO: API CHECK CREDENTIAL
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const file = await getFileByName(`${applicantId}.pdf`);
-        console.log("Fetched file:", file);
-        setFileTarget(file);
+        const file_contract = await getFileByName(`${applicantId}.pdf`,contract);
+        const file_absence = await getFileByName(`${applicantId}.pdf`,absence);
+        console.log("Fetched file ( contract ):", file_contract);
+        console.log("Fetched file ( absences ):", file_absence);
 
         // ✅ Use the fetched file directly
-        if (file && Object.keys(file).length > 0) {
-          setBoolFiletarget(true);
+        if (file_contract && Object.keys(file_contract).length > 0) {
+          setBoolFiletarget_contract(true);
         } else {
-          setBoolFiletarget(false);
+          setBoolFiletarget_contract(false);
         }
+        if (file_absence && Object.keys(file_absence).length > 0) {
+          setBoolFiletarget_absence(true);
+        } else {
+          setBoolFiletarget_absence(false);
+        } 
+
       } catch (err) {
         console.error("Fetch error:", err);
       }
+      
+          
+      
     };
 
     fetchData();
@@ -484,37 +496,24 @@ const ResultTable = ({ result }) => {
                       {lastName}
                     </td>
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
-                      <button
-                        className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs w-full sm:w-auto"
-                        onClick={() =>
-                          window.open("https://www.google.com", "_blank")
-                        }
-                      >
-                        Download
-                      </button>
+                       {
+                          boolFileTarget_absence
+                          ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} targetLocation={absence} />
+                          : <div > อยู่ระหว่างการดำเนินการ </div>
+                          
+                      }
                     </td>
-                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-center border-r border-gray-300">
-                      {boolFileTarget ? (
-                        <button
-                          className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs w-full sm:w-auto"
-                          onClick={() =>
-                            window.open(
-                              `https://drive.google.com/yourfile/${applicantId}.pdf`,
-                              "_blank"
-                            )
-                          }
-                        >
-                          Download
-                        </button>
-                      ) : (
-                        <div className="text-xs sm:text-sm">
-                          เปิดให้ดาวน์โหลด 4 สิงหาคม
-                        </div>
-                      )}
+                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
+                      {
+                          boolFileTarget_contract
+                          ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} targetLocation = {contract} />
+                          : <div> เปิดให้อัปโหลด 4 สิงหาคม </div>
+                          
+                      }
                     </td>
 
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
-                      {boolFileTarget ? (
+                      {boolFileTarget_contract ? (
                         <button
                           className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs w-full sm:w-auto"
                           onClick={() =>
