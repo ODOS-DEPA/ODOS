@@ -44,9 +44,9 @@ root.render(
         <Route
   path="/check-status"
   element={
-    <Captcha>
+    //<Captcha>
     <Checkstatus />
-    </Captcha>
+    //</Captcha>
   }
 />
 
