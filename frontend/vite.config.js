@@ -2,7 +2,12 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import removeConsole from "vite-plugin-remove-console";
 import obfuscator from "vite-plugin-javascript-obfuscator";
+import path from 'path'
+import dotenv from 'dotenv'
 
+
+// โหลด .env จาก root project
+dotenv.config({ path: path.resolve(__dirname, '../.env') })
 export default defineConfig({
   plugins: [
     react(),
