@@ -25,7 +25,7 @@ function Home() {
         {/* <br />
         <br /> */}
         <Region />
-        <img src="/images/Section 3 - 4 EN3.jpg" alt="" />
+              <img src="/images/ODOS Website_EN_V3_Section 3 - 4.jpg" alt="" />
         {/* <Button /> */}
         <br />
         <br />

@@ -1,44 +1,35 @@
-import React, { useState, useEffect } from "react";
+import React, { useState , useEffect } from "react";
 import GoogleDriveLinkButton from "./GoogleDriveConfidentialDownload";
 import { getFileByName } from "./GoogleDriveConfidentialDownload";
 const ResultTable = ({ result }) => {
   const [showEnglishCode, setShowEnglishCode] = useState(false);
   const [showDigitalCode, setShowDigitalCode] = useState(false);
-  const [contract,setcontract] = useState("contract");
-  const [absence,setabsence] = useState("absence");
-  const [boolFileTarget_contract, setBoolFiletarget_contract] = useState(false);
-  const [boolFileTarget_absence, setBoolFiletarget_absence] = useState(false);
-  //TODO: API CHECK CREDENTIAL
+  const [fileTarget, setFileTarget] = useState({});
+  const [boolFileTarget,setBoolFiletarget] = useState(false)
+//TODO: API CHECK CREDENTIAL
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const file_contract = await getFileByName(`${applicantId}.pdf`,contract);
-        const file_absence = await getFileByName(`${applicantId}.pdf`,absence);
-        console.log("Fetched file ( contract ):", file_contract);
-        console.log("Fetched file ( absences ):", file_absence);
+        const file = await getFileByName(`${applicantId}.pdf`);
+        console.log("Fetched file:", file);
+        setFileTarget(file);
 
         // ✅ Use the fetched file directly
-        if (file_contract && Object.keys(file_contract).length > 0) {
-          setBoolFiletarget_contract(true);
+        if (file && Object.keys(file).length > 0) {
+          setBoolFiletarget(true);
         } else {
-          setBoolFiletarget_contract(false);
+          setBoolFiletarget(false);
         }
-        if (file_absence && Object.keys(file_absence).length > 0) {
-          setBoolFiletarget_absence(true);
-        } else {
-          setBoolFiletarget_absence(false);
-        } 
 
       } catch (err) {
-        console.error("Fetch error:", err);
+        console.error('Fetch error:', err);
       }
-      
-          
-      
     };
 
     fetchData();
   }, []);
+
+
 
   if (!result) return null;
 
@@ -248,18 +239,24 @@ const ResultTable = ({ result }) => {
         </button>
       </div>
 
+      
+
+
       {/* ตารางสำหรับการสมัครในบัตร */}
       <div>
-        {getStatusText(status) === "ผ่านสอบสัมภาษณ์" ? (
+        {
+          getStatusText(status) === "ผ่านสอบสัมภาษณ์"
+          ? 
           <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
             ยืนยัน/สละสิทธ์การเข้าร่วมโครงการ (1 - 3 ส.ค. 68)
           </h3>
-        ) : (
+          : 
           <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
             ผลการสอบสัมภาษณ์
           </h3>
-        )}
 
+        }
+        
         <div className="overflow-x-auto shadow-lg rounded-lg -mx-2 sm:mx-0">
           <div className="min-w-[800px] sm:min-w-0">
             <table className="w-full bg-white border border-gray-200">
@@ -327,18 +324,11 @@ const ResultTable = ({ result }) => {
                         }`}
                       >
                         <span className="whitespace-pre-line">
-                          {getStatusText(status) === "ผ่านสอบสัมภาษณ์" ? (
-                            <a
-                              href="https://short.depa.or.th/QuU7C"
-                              className="text-white-500 underline hover:text-gray-300"
-                            >
-                              {`${getStatusText(status)}`}
-                              <br />
-                              คลิ้กที่นี่เพื่อยืนยันสิทธิ
-                            </a>
-                          ) : (
-                            getStatusText(status)
-                          )}
+                          {
+                            getStatusText(status) === "ผ่านสอบสัมภาษณ์"
+                            ? <a href="https://short.depa.or.th/QuU7C" className="text-white-500 underline hover:text-gray-300">{`${getStatusText(status)}`}<br/>คลิ้กที่นี่เพื่อยืนยันสิทธิ</a>
+                            : getStatusText(status)
+                          }
                         </span>
                       </span>
                     </div>
@@ -447,7 +437,6 @@ const ResultTable = ({ result }) => {
           <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
             รายงานตัวและทำสัญญา (4 - 8 ส.ค. 68)
           </h3>
-
           <div className="overflow-x-auto shadow-lg rounded-lg -mx-2 sm:mx-0 mb-6">
             <div className="min-w-[800px] sm:min-w-0">
               <table className="w-full bg-white border border-gray-200">
@@ -463,29 +452,18 @@ const ResultTable = ({ result }) => {
                       นามสกุล
                     </th>
                     <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
-                      ดาวน์โหลดหนังสือแจ้งสถาบันการศึกษา
-                    </th>
-                    <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
                       ดาวน์โหลดเอกสารเพื่อทำสัญญา
                     </th>
                     <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium border-r border-gray-300">
-                      อัปโหลดเพื่อส่งตัวสัญญา
-                      <br />
-                      <a
-                        href="https://youtu.be/sohIhjnt3uc?si=AxHQzr5UUbexi7g-"
-                        className="text-white underline hover:text-gray-300"
-                      >
-                        วิธีการแสกนไฟล์
-                      </a>
+                      อัปโหลดเพื่อส่งตัวสัญญา<br/><a href="https://youtu.be/sohIhjnt3uc?si=AxHQzr5UUbexi7g-" className="text-white-500 underline hover:text-gray-300">วิธีการแสกนไฟล์</a>
                     </th>
                     <th className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm font-medium">
                       ผลการตรวจเอกสาร
                     </th>
                   </tr>
                 </thead>
-
                 <tbody className="divide-y divide-gray-200">
-                  <tr className="hover:bg-gray-100">
+                  <tr className="hover:bg-orange-50">
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-900 text-center font-medium border-r border-gray-300">
                       {applicantId}
                     </td>
@@ -495,43 +473,31 @@ const ResultTable = ({ result }) => {
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-gray-900 text-center border-r border-gray-300">
                       {lastName}
                     </td>
-                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
-                       {
-                          boolFileTarget_absence
-                          ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} targetLocation={absence} />
-                          : <div > อยู่ระหว่างการดำเนินการ </div>
+                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm text-center border-r border-gray-300">
+                      <div className="flex flex-col items-center space-y-1">
+                        {/* <LinkButton href="https://www.google.com">Link</LinkButton> */}
+                        {
+                          boolFileTarget
+                          ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} />
+                          : <div> เปิดให้ ดาวน์โหลด 4 สิงหาคม </div>
                           
-                      }
+                        }
+                      </div>
                     </td>
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
                       {
-                          boolFileTarget_contract
-                          ? <GoogleDriveLinkButton targetFileName={`${applicantId}.pdf`} targetLocation = {contract} />
-                          : <div> เปิดให้อัปโหลด 4 สิงหาคม </div>
-                          
+                        boolFileTarget
+                        ? <button className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs"
+                          onClick={() => window.location.href = "https://short.depa.or.th/N9lOh"}>
+                        Upload
+                      </button>
+                        : <div> เปิดให้ อัปโหลด 4 สิงหาคม </div>
                       }
                     </td>
-
-                    <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm border-r border-gray-300">
-                      {boolFileTarget_contract ? (
-                        <button
-                          className="bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs w-full sm:w-auto"
-                          onClick={() =>
-                            window.open(
-                              "https://short.depa.or.th/N9lOh",
-                              "_blank"
-                            )
-                          }
-                        >
-                          Upload
-                        </button>
-                      ) : (
-                        <div>เปิดให้อัปโหลด 4 สิงหาคม</div>
-                      )}
-                    </td>
-
                     <td className="px-2 sm:px-4 py-2 sm:py-3 text-center text-xs sm:text-sm">
                       {result["ผลการตรวจเอกสาร"]}
+                      
+                      
                     </td>
                   </tr>
                 </tbody>
