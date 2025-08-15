@@ -73,6 +73,7 @@ if (!/^\d{10}$/.test(trimmedVerifyCode)) {
       <div className="container mx-auto py-8 px-4 text-[#003366] mb-4 font-sukhumvit">
         <h2 className="font-serif text-2xl font-sukhumvit">
           ระบบตรวจสอบสถานะการพิจารณาโครงการ ODOS
+          
         </h2>
         <SearchForm
           searchId={searchId}
