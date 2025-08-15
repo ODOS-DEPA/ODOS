@@ -52,7 +52,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/checkstatus" element={<Checkstatus />} />
       {/* เพิ่ม routes อื่นๆ ตามต้องการ */}
-      {/* <Route path="/InfoTH" element={<InfoTH />} />
+      {/* <Route path="/InfoTH" element={<InfoTH />}  jjjj/>
       <Route path="/qaTH" element={<QaTH />} />
       <Route path="/Dashboard" element={<Dashboard />} /> */}
     </Routes>
