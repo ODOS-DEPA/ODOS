@@ -59,8 +59,9 @@ if (!/^\d{10}$/.test(trimmedVerifyCode)) {
 
     try {
       const response = await fetch(
-        `https://odos.thaigov.go.th:3000/api/searchV?searchId=${searchId}&verifyCode=${verifyCode}` // Main Server
-        // `/api/searchV?searchId=${searchId}&verifyCode=${verifyCode}` // Myserver
+        `https://${import.meta.env.VITE_DOMAIN_NAME}:${import.meta.env.VITE_DOMAIN_BACKEND_PORT}/api/searchV?searchId=${searchId}&verifyCode=${verifyCode}` // Main Server
+        //`https://odos.thaigov.go.th:3000/api/searchV?searchId=${searchId}&verifyCode=${verifyCode}` // Main Server
+
       );
 
       if (!response.ok) {
