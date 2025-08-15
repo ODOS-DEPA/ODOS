@@ -31,6 +31,8 @@ app.use(
         origin: [
             "http://127.0.0.1:3000",
             "http://localhost:3000",
+            "https://odos.thaigov.go.th",
+            "https://nodomain.space:3000",
             "https://nodomain.space",
         ],
         methods: ["GET", "POST", "PUT", "DELETE"],

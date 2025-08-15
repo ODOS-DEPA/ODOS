@@ -8,6 +8,8 @@ import dotenv from 'dotenv'
 
 // โหลด .env จาก root project
 dotenv.config({ path: path.resolve(__dirname, '../.env') })
+
+
 export default defineConfig({
   plugins: [
     react(),
@@ -39,5 +41,6 @@ export default defineConfig({
   },
   define: {
     'import.meta.env.VITE_DOMAIN_NAME': JSON.stringify(process.env.VITE_DOMAIN_NAME),
+    'import.meta.env.VITE_DOMAIN_BACKEND_PORT': JSON.stringify(process.env.VITE_DOMAIN_BACKEND_PORT),
   },
 });
