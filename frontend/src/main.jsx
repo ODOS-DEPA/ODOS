@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Checkstatus from "./pages/Checkstatus.jsx";
 import App from "./App.jsx";
 import Captcha from "./pages/Captcha.jsx";
+import List from "./pages/List.jsx";
 import "./index.css";
 import Maintenance from "./pages/Maintenance.jsx";
 import TH from "./pages/TH.jsx";
@@ -13,6 +14,7 @@ import QaTH from "./pages/qaTH.jsx";
 import Qa from "./pages/qa.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Announcement from "./pages/Announcement.jsx";
+import Forgot from "./pages/forgetmail.jsx";
 import RandomInfoTH from "./pages/RandomSlot_TH.jsx";
 
 const root = createRoot(document.getElementById("root"));
@@ -38,6 +40,7 @@ root.render(
         <Route path="/qa" element={<Qa />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Announcement" element={<Announcement />} />
+        <Route path="/forgetmail" element={<Forgot />} />
         <Route path="/Info2TH" element={<RandomInfoTH />} />
 
         {/* เส้นทางที่ต้องตรวจสอบ CAPTCHA */}
