@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Mammoth from "mammoth";
 import { useState, useEffect } from "react";
-// import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 import Navbar_info from "../components/NavQA";
 import ScrollToTop from "../components/ScrollToTop";
 
@@ -13,7 +13,7 @@ function QaEN() {
   return (
     <div className="LINESeed">
 
-      <NavbarTH />
+      <Navbar />
       <ScrollToTop />
       <div>
         <img src="/images/info_sec1_banner_en.png" alt="" />

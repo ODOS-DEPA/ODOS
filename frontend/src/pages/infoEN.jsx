@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
-import NavbarTH from "../components/NavbarTH";
+import Navbar from "../components/Navbar";
 
 
 /**
@@ -216,7 +216,7 @@ const otherSectionsData = [
 function InfoEN() {
   return (
     <div className="LINESeed">
-      <NavbarTH />
+      <Navbar />
       <ScrollToTop />
       
       <div>

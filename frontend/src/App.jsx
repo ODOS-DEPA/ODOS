@@ -12,7 +12,7 @@ import NavbarTH from "./components/NavbarTH"
 function Home() {
   return (
     <div className="LINESeed">
-      <NavbarTH />
+      <Navbar />
       <ScrollToTop />
       <div>
         {/* <img src="/images/Section1.png" alt="" /> */}
