@@ -18,7 +18,7 @@ function QaEN() {
       <div>
         <img src="/images/info_sec1_banner_en.png" alt="" />
       </div>
-      {/* Details */}
+      {/* Details  */}
       <div>
         <div className="id= qualification">
           <div className="h-screen flex flex-col">
