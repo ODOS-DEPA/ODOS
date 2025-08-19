@@ -28,24 +28,6 @@ const SearchForm = ({ searchId, setSearchId, verifyCode, setVerifyCode, handleSe
       />
     </label>
 
-    {/* 🔗 ลิงก์ลืมรหัสผ่าน — ชิดขวา */}
-  {/*<div className="flex justify-end">*/}
-  {/*  <a*/}
-  {/*    href="/forgot-password"               // เปลี่ยน URL ให้ตรงหน้า “ลืมรหัสผ่าน” จริง*/}
-  {/*    className="text-blue-500 text-xs md:text-sm hover:underline font-sukhumvit"*/}
-  {/*    target="_blank"                       // ถ้าอยากเปิดแท็บใหม่ เอาออกได้ถ้าไม่ต้องการ*/}
-  {/*    rel="noopener noreferrer"*/}
-  {/*  >*/}
-  {/*    ลืมรหัสผ่าน*/}
-  {/*  </a>*/}
-  {/*      </div>*/}
-
-        <div className="flex justify-end mt-6">
-            <Link to="/forgetmail" className="text-blue-500 text-xs md:text-sm hover:underline font-sukhumvit">
-                ลืมรหัสผ่าน
-            </Link>
-        </div>
-
     <button
       type="submit"
       className="w-16 md:w-[100px] px-2 py-2 bg-[#0e131a] text-white font-sukhumvit rounded-lg shadow-sm hover:bg-[#444444] focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-200"

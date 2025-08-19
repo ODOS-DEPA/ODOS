@@ -19,22 +19,22 @@ const Checkstatus = () => {
     e.preventDefault();
 
     if (!/^S\d+$/.test(trimmedId)) {
-  setError("กรุณากรอกรหัสผู้สมัครที่ถูกต้อง (ตัว S ตามด้วยตัวเลข)");
-  setResult(null);
-  setHasSearched(true);
-  setIsSubmitting(false);
-  setIsLoading(false);
-  return;
-}
+      setError("กรุณากรอกรหัสผู้สมัครที่ถูกต้อง (ตัว S ตามด้วยตัวเลข)");
+      setResult(null);
+      setHasSearched(true);
+      setIsSubmitting(false);
+      setIsLoading(false);
+      return;
+    }
 
-if (!/^\d{10}$/.test(trimmedVerifyCode)) {
-  setError("กรุณากรอกรหัสยืนยัน 10 หลักให้ถูกต้อง");
-  setResult(null);
-  setHasSearched(true);
-  setIsSubmitting(false);
-  setIsLoading(false);
-  return;
-}
+    if (!/^\d{10}$/.test(trimmedVerifyCode)) {
+      setError("กรุณากรอกรหัสยืนยัน 10 หลักให้ถูกต้อง");
+      setResult(null);
+      setHasSearched(true);
+      setIsSubmitting(false);
+      setIsLoading(false);
+      return;
+    }
 
     // ถ้าข้อมูลถูกต้อง ค่อยเริ่มโหลด
     setIsLoading(true);
@@ -43,7 +43,8 @@ if (!/^\d{10}$/.test(trimmedVerifyCode)) {
 
     try {
       const response = await fetch(
-        `https://${import.meta.env.VITE_DOMAIN_NAME}/api/searchV?searchId=${searchId}&verifyCode=${verifyCode}` // Main Server
+        `https://${import.meta.env.VITE_DOMAIN_NAME}:8443/students/${searchId}`
+        //`https://${import.meta.env.VITE_DOMAIN_NAME}:8443/api/searchV?searchId=${searchId}&verifyCode=${verifyCode}` // Main Server
         //`https://odos.thaigov.go.th:3000/api/searchV?searchId=${searchId}&verifyCode=${verifyCode}` // Main Server
 
       );
