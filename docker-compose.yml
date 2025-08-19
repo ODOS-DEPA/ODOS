@@ -13,16 +13,6 @@ services:
     networks:
       - mynetwork
 
-  backend:
-    build:
-      context: .
-      dockerfile: ./backend/Dockerfile
-    container_name: backend
-    ports:
-      - "80:80"
-    networks:
-      - mynetwork
-
 networks:
   mynetwork:
     driver: bridge
