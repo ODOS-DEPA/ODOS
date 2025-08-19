@@ -16,7 +16,7 @@ function navbarAnnouncement({ hideLanguageTranslator }) {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Desktop Logo - แสดงใน tablet ขึ้นไป */}
         <img
-          src="\images\Logo ODOS and KV_Monochome_Black.png"
+          src="\images\icons\Logo ODOS and KV_Monochome_Black.png"
           alt=""
           className="hidden md:block h-16 w-16 lg:h-20 lg:w-20 xl:h-24 xl:w-24"
         />
@@ -25,7 +25,7 @@ function navbarAnnouncement({ hideLanguageTranslator }) {
         <div className="flex md:hidden items-center justify-between w-full">
           {/* Mobile Logo */}
           <img
-            src="\images\Logo ODOS and KV_Monochome_Black.png"
+            src="\images\icons\Logo ODOS and KV_Monochome_Black.png"
             alt=""
             className="h-12 w-12"
           />

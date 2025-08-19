@@ -19,7 +19,7 @@ function NavbarTH({ hideLanguageTranslator }) {
   if (lang === "EN") {
     if (path === "/") return navigate("/EN");
     if (path === "/InfoTH") return navigate("/Information");
-    if (path === "/qaTH") return navigate("/qa");
+    if (path === "/qaTH") return navigate("/qaEN");
     if (path === "/Info2TH") return navigate("/Information");
     if (path === "/Dashboard") return navigate("/Dashboard");
     if (path === "/Announcement") return navigate("/Announcement");
@@ -29,7 +29,7 @@ function NavbarTH({ hideLanguageTranslator }) {
   if (lang === "TH") {
     if (path === "/EN") return navigate("/");
     if (path === "/Information") return navigate("/InfoTH");
-    if (path === "/qa") return navigate("/qaTH");
+    if (path === "/qaEN") return navigate("/qaTH");
     if (path === "/Dashboard") return navigate("/Dashboard");
     if (path === "/Announcement") return navigate("/Announcement");
     return navigate("/");
@@ -42,7 +42,7 @@ function NavbarTH({ hideLanguageTranslator }) {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Desktop Logo */}
         <img
-          src="/images/Logo ODOS and KV_Monochome_Black.png"
+          src="/images/icons/Logo ODOS and KV_Monochome_Black.png"
           alt="Logo ODOS"
           className="hidden md:block h-16 w-16 lg:h-20 lg:w-20 xl:h-24 xl:w-24"
         />
@@ -50,7 +50,7 @@ function NavbarTH({ hideLanguageTranslator }) {
         {/* Mobile Layout */}
         <div className="flex md:hidden items-center justify-between w-full">
           <img
-            src="/images/Logo ODOS and KV_Monochome_Black.png"
+            src="/images/icons/Logo ODOS and KV_Monochome_Black.png"
             alt="Logo ODOS"
             className="h-12 w-12"
           />

@@ -35,7 +35,7 @@ function RandomInfoTH() {
             <ScrollToTop />
 
             <div>
-                <img src="/images/ODOS Website_Detail_Section 1.jpg" alt="" />
+                <img src="/images/info_sec1_banner_th.jpg" alt="" />
             </div>
 
             {/* ข้อความแนะนำการเตรียมสอบ */}
