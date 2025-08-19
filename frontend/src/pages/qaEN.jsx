@@ -89,8 +89,6 @@ function QaEN() {
         
       </div>
 
-      
-
     </div>
   );
 }
