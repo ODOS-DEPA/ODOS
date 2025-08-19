@@ -14,23 +14,7 @@ const Checkstatus = () => {
   const [hasSearched, setHasSearched] = useState(false);
   const trimmedId = searchId.trim();
   const trimmedVerifyCode = verifyCode.trim();
-  // useEffect(() => {
-  //       const refreshedStep = sessionStorage.getItem("refreshedStep");
-  //       console.log("refreshedStep:", refreshedStep);
 
-  //       if (!refreshedStep) {
-  //           sessionStorage.setItem("refreshedStep", "1");
-  //           console.log(">> Refreshing: รอบที่ 1");
-  //           window.location.reload();
-  //       } else if (refreshedStep === "1") {
-  //           sessionStorage.setItem("refreshedStep", "2");
-  //           console.log(">> Refreshing: รอบที่ 2");
-  //           window.location.reload();
-  //       } else {
-  //           console.log("✅ ไม่รีเฟรชแล้ว (ครบ 2 รอบ)");
-  //           // do nothing
-  //       }
-  //   }, []);
   const handleSearch = async (e) => {
     e.preventDefault();
 
@@ -89,6 +73,7 @@ if (!/^\d{10}$/.test(trimmedVerifyCode)) {
       <div className="container mx-auto py-8 px-4 text-[#003366] mb-4 font-sukhumvit">
         <h2 className="font-serif text-2xl font-sukhumvit">
           ระบบตรวจสอบสถานะการพิจารณาโครงการ ODOS
+          
         </h2>
         <SearchForm
           searchId={searchId}

@@ -636,19 +636,6 @@ const ResultTable = ({ result }) => {
                         </div>
                       </td>
 
-                      {/* ✅ ระบบทดลองสอบ */}
-                      <td className="px-2 sm:px-3 py-2 sm:py-3 text-xs sm:text-sm border-r border-gray-300 relative">
-                        {/* {!examPeriodActive && <DisabledExamOverlay />} */}
-                        <div className="text-center">
-                          {/*<LinkButton href="https://odos.globish.co.th/guest">*/}
-                          {/*    <span className="block sm:hidden">ทดลอง</span>*/}
-                          {/*    <span className="hidden sm:block">*/}
-                          {/*        Click ทดลองสอบ*/}
-                          {/*    </span>*/}
-                          {/*</LinkButton>*/}
-                        </div>
-                      </td>
-
                       {/* ✅ ระบบสอบจริง */}
                       <td className="px-2 sm:px-3 py-2 sm:py-3 text-xs sm:text-sm relative">
                         {/* {!examPeriodActive && (
