@@ -1,13 +1,25 @@
 import React from "react";
 import Stage1Tag from "./stage-TAG/stage1-tag";
 import Stage2Tag from "./stage-TAG/stage2-tag";
-export default function ResultStage_1({ STD_ID, firstName, lastName, status }) {
+export default function ResultStage_1({ result }) {
   const headers = ["รหัสผู้สมัคร", "ชื่อ", "นามสกุล", "สถานะ"];
+  let currentstage;
+  switch(result.currentStatus){
+  case "1": currentstage = "stage1"; break;
+  case "2": currentstage = "stage2"; break;
+  case "3": currentstage = "stage3"; break;
+  case "4": currentstage = "stage4"; break;
+  case "5": currentstage = "stage5"; break;
+  case "6": currentstage = "stage6"; break;
+  case "7": currentstage = "stage7"; break;
+  case "8": currentstage = "stage8"; break;
+  default: currentstage = null;
+}
   const rowData = [
-    { value: STD_ID },
-    { value: firstName },
-    { value: lastName },
-    { value: status }
+    { value: result.StudentID },
+    { value: result.Name },
+    { value: result.Surname },
+    { value: result[currentstage] }
   ];
 
   const renderTag = () => {
@@ -18,7 +30,7 @@ export default function ResultStage_1({ STD_ID, firstName, lastName, status }) {
         "onProcess" : "bg-yellow-600 text-white text-center text-xs sm:text-sm font-medium" ,
 
     }
-    switch (status) {
+    switch (result[currentstage]) {
       case "ผ่าน":
         return(
             <>

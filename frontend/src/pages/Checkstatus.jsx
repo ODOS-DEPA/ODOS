@@ -14,7 +14,6 @@ const Checkstatus = () => {
   return (
     <div className="Sukhumvit">
       <NavbarTH />
-
       <div className="container mx-auto py-8 px-4 text-[#003366] mb-4 font-sukhumvit">
         <h2 className="font-serif text-2xl font-sukhumvit">
           ระบบตรวจสอบสถานะการพิจารณาโครงการ ODOS
@@ -25,18 +24,20 @@ const Checkstatus = () => {
           setError={setError}
           setIsLoading={setIsLoading}
           setHasSearched={setHasSearched}
+          
         />
 
         {/* error message */}
         {error && <p className="mt-4 text-red-600">{error}</p>}
-
+        {console.log(result)}
         {/* loading */}
         {isLoading && <p className="mt-4 text-gray-600">กำลังโหลด...</p>}
 
         {/* success case */}
         {hasSearched && !isLoading && result && (
           <>
-            <ProgressSteps status={result.Status || "รอการพิจารณา"} />
+            {/* <ProgressSteps status={result.Status || "รอการพิจารณา"} /> */}
+            <ProgressSteps status={"รอการพิจารณา"} />
             <ResultTable result={result} />
           </>
         )}
