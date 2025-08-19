@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Mammoth from "mammoth";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/FooterTH";
 import NavbarTH from "../components/NavbarTH";
