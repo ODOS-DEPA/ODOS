@@ -9,14 +9,14 @@ import ScrollToTop from "../components/ScrollToTop";
 import { Underline } from "lucide-react";
 import Footer from "../components/Footer";
 import NavbarTH from "../components/NavbarTH";
-function Qa() {
+function QaEN() {
   return (
     <div className="LINESeed">
 
       <NavbarTH />
       <ScrollToTop />
       <div>
-        <img src="/images/Section1.png" alt="" />
+        <img src="/images/info_sec1_banner_en.png" alt="" />
       </div>
       {/* Details */}
       <div>
@@ -95,4 +95,4 @@ function Qa() {
   );
 }
 
-export default Qa;
+export default QaEN;

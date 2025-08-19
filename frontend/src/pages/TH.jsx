@@ -19,10 +19,10 @@ function TH() {
             <ScrollToTop />
             <div>
                 {/* <img src="/images/ODOS Website_Detail_Section 1.jpg" alt="" /> */}
-                <img src="/images/Section 1-th.jpg" alt="" />
+                <img src="/images/homepage_sec1_banner_th.jpg" alt="" />
             </div>
             <div>
-                <img src="/images/ODOS Website_TH_20032025_Section 2_0.jpg" alt="" />
+                <img src="/images/homepage_sec2_th.jpg" alt="" />
             </div>
 
             <div className="flex flex-col justify-center items-center">
@@ -31,7 +31,7 @@ function TH() {
                 {/* <br />
                 <br /> */}
                 <Region />
-                <img src="/images/ODOS Website_TH_V3_Section 3 - 4.jpg" alt="" />
+                <img src="/images/homepage_sec3_th.jpg" alt="" />
                 {/* <Button /> */}
                 <br />
                 <br />
@@ -43,7 +43,7 @@ function TH() {
                 <TimelineTH />
             </div>
             <div>
-                <img src="/images/ODOS Website_Partners_26072025_Partners_TH.jpg" alt="" />
+                <img src="/images/homepage_sec5_partners_th.jpg" alt="" />
             </div>
 
             <div className="flex flex-col">

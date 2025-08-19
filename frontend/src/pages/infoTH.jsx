@@ -216,7 +216,7 @@ function InfoTH() {
         <ScrollToTop />
         
         <div>
-          <img src="/images/ODOS Website_Detail_Section 1.jpg" alt="แบนเนอร์โครงการ" />
+          <img src="/images/info_sec1_banner_th.jpg" alt="แบนเนอร์โครงการ" />
         </div>
   
         <TestPrepSection />

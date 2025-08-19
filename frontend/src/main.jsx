@@ -7,10 +7,10 @@ import Captcha from "./pages/Captcha.jsx";
 import "./index.css";
 import Maintenance from "./pages/Maintenance.jsx";
 import TH from "./pages/TH.jsx";
-import Information from "./pages/Information.jsx";
+import Information from "./pages/infoEN.jsx";
 import InfoTH from "./pages/infoTH.jsx";
 import QaTH from "./pages/qaTH.jsx";
-import Qa from "./pages/qa.jsx";
+import QaEN from "./pages/qaEN.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Announcement from "./pages/Announcement.jsx";
 import RandomInfoTH from "./pages/RandomSlot_TH.jsx";
@@ -35,7 +35,7 @@ root.render(
         <Route path="/Information" element={<Information />} />
         <Route path="/infoTH" element={<InfoTH />} />
         <Route path="/qaTH" element={<QaTH />} />
-        <Route path="/qa" element={<Qa />} />
+        <Route path="/qaEN" element={<QaEN />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Announcement" element={<Announcement />} />
         <Route path="/Info2TH" element={<RandomInfoTH />} />

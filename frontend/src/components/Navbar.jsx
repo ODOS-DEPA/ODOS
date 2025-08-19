@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LanguageTranslator from "./LanguageTranslator";
 import { Link } from "react-router-dom";
 import Maintenance from "../pages/Maintenance";
-import Information from "../pages/Information";
+import Information from "../pages/infoEN";
 
 function Navbar({ hideLanguageTranslator }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ function Navbar({ hideLanguageTranslator }) {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Desktop Logo - แสดงใน tablet ขึ้นไป */}
         <img
-          src="\images\Logo ODOS and KV_Monochome_Black.png"
+          src="\images\icons\Logo ODOS and KV_Monochome_Black.png"
           alt=""
           className="hidden md:block h-16 w-16 lg:h-20 lg:w-20 xl:h-24 xl:w-24"
         />
@@ -25,7 +25,7 @@ function Navbar({ hideLanguageTranslator }) {
         <div className="flex md:hidden items-center justify-between w-full">
           {/* Mobile Logo */}
           <img
-            src="\images\Logo ODOS and KV_Monochome_Black.png"
+            src="\images\icons\Logo ODOS and KV_Monochome_Black.png"
             alt=""
             className="h-12 w-12"
           />
@@ -48,7 +48,7 @@ function Navbar({ hideLanguageTranslator }) {
             <Link to="/" className="hover:text-gray-600 transition-colors whitespace-nowrap">Home</Link>
             <Link to="/Information" className="hover:text-gray-600 transition-colors whitespace-nowrap">Information</Link>
             <Link to="/Check-status" className="hover:text-gray-600 transition-colors whitespace-nowrap">Check Status</Link>
-            <Link to="/qa" className="hover:text-gray-600 transition-colors whitespace-nowrap">Q&A</Link>
+            <Link to="/qaEN" className="hover:text-gray-600 transition-colors whitespace-nowrap">Q&A</Link>
             <Link to="/Dashboard" className="hover:text-gray-600 transition-colors whitespace-nowrap">Dashboard</Link>
             <Link to="/Announcement" className="hover:text-gray-600 transition-colors whitespace-nowrap">Announcement</Link>
           </div>
@@ -87,7 +87,7 @@ function Navbar({ hideLanguageTranslator }) {
               Check Status
             </Link>
             <Link 
-              to="/qa" 
+              to="/qaEN" 
               className="hover:text-gray-600 transition-colors py-1"
               onClick={() => setIsMenuOpen(false)}
             >

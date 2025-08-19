@@ -16,16 +16,16 @@ function Home() {
       <ScrollToTop />
       <div>
         {/* <img src="/images/Section1.png" alt="" /> */}
-        <img src="/images/Section 1-en.jpg" alt="" />
+        <img src="/images/homepage_sec1_banner_en.jpg" alt="" />
       </div>
       <div>
-        <img src="/images/ODOS Website_EN_Section 2_0.jpg" alt="" />
+        <img src="/images/homepage_sec2_en.jpg" alt="" />
       </div>
       <div className="flex flex-col justify-center items-center">
         {/* <br />
         <br /> */}
         <Region />
-              <img src="/images/ODOS Website_EN_V3_Section 3 - 4.jpg" alt="" />
+              <img src="/images/homepage_sec3_en.jpg" alt="" />
         {/* <Button /> */}
         <br />
         <br />
@@ -37,7 +37,7 @@ function Home() {
         <Timeline />
       </div>
           <div>
-              <img src="/images/ODOS Website_Partners_26072025_Partners_EN.jpg" alt="" /> 
+              <img src="/images/homepage_sec5_partners_en.jpg" alt="" /> 
       </div>
       <div className="flex flex-col">
         <Footer />

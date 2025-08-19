@@ -220,7 +220,7 @@ function InfoEN() {
       <ScrollToTop />
       
       <div>
-        <img src="/images/Section1.png" alt="Program Banner" />
+        <img src="/images/info_sec1_banner_en.png" alt="Program Banner" />
       </div>
 
       <TestPrepSection />
