@@ -5,7 +5,7 @@ import FooterTH from "../components/FooterTH";
 import TimelineTH from "../components/TimelineTH";
 import ScrollToTop from "../components/ScrollToTop";
 import Region from "../components/Region";
-import Button from "../components/Button";
+// import Button from "../components/Button";
 import DeclarationTH from "../components/DeclareTH";
 
 function TH() {

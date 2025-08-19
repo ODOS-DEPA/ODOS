@@ -4,10 +4,10 @@ import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
 import ScrollToTop from "./components/ScrollToTop";
 import Region from "./components/Region";
-import Button from "./components/Button";
+// import Button from "./components/Button";
 import Declaration from "./components/Declaration";
 import Checkstatus from "./pages/Checkstatus";
-import NavbarTH from "./components/NavbarTH"
+// import NavbarTH from "./components/NavbarTH"
 // สร้าง Home component สำหรับหน้าแรก
 function Home() {
   return (
