@@ -11,7 +11,7 @@ services:
     ports:
       - "443:443"  # เปิดพอร์ต HTTPS
     networks:
-      - mynetwork
+      - ODOS-Website
 
 networks:
   mynetwork:
