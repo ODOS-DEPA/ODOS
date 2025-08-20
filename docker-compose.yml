@@ -3,7 +3,7 @@ version: '3.8'
 services:
   frontend:
     image: nginx:alpine
-    container_name: odos-website
+    container_name: frontend
     volumes:
       - ./frontend/dist:/usr/share/nginx/html
       - ./frontend/nginx.conf:/etc/nginx/conf.d/default.conf
@@ -11,8 +11,8 @@ services:
     ports:
       - "443:443"  # เปิดพอร์ต HTTPS
     networks:
-      - ODOS-Website
+      - odos-website
 
 networks:
-  mynetwork:
+  odos-website:
     driver: bridge
