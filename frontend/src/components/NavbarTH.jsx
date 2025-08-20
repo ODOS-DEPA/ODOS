@@ -70,11 +70,12 @@ function NavbarTH({ hideLanguageTranslator }) {
           <div className="flex gap-3 lg:gap-4 xl:gap-6 text-[10px] sm:text-[11px] lg:text-[12px] xl:text-[13px] pr-3 lg:pr-4">
             <Link to="/" className="hover:text-gray-600 transition-colors whitespace-nowrap">Home</Link>
             <Link to="/InfoTH" className="hover:text-gray-600 transition-colors whitespace-nowrap">Information</Link>
-            <Link to="/check-status" className="hover:text-gray-600 transition-colors whitespace-nowrap">Check Status</Link>
+            {/* <Link to="/check-status" className="hover:text-gray-600 transition-colors whitespace-nowrap">Check Status</Link> */}
             <Link to="/qaTH" className="hover:text-gray-600 transition-colors whitespace-nowrap">Q&A</Link>
-            <Link to="/Dashboard" className="hover:text-gray-600 transition-colors whitespace-nowrap">Dashboard</Link>
-            <Link to="/Announcement" className="hover:text-gray-600 transition-colors whitespace-nowrap">Announcement</Link>
-            <Link to="/Info2TH" className="hover:text-gray-600 transition-colors whitespace-nowrap">Draw Lots & Interviews</Link>
+            {/* <Link to="/Dashboard" className="hover:text-gray-600 transition-colors whitespace-nowrap">Dashboard</Link> */}
+            {/* <Link to="/Announcement" className="hover:text-gray-600 transition-colors whitespace-nowrap">Announcement</Link> */}
+            {/* <Link to="/Info2TH" className="hover:text-gray-600 transition-colors whitespace-nowrap">Draw Lots & Interviews</Link> */}
+                        <a href="https://nodomain.space/" className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS#1</a>
           </div>
           <div className="text-[10px] sm:text-[11px] lg:text-[12px] xl:text-[13px]">
             <button
@@ -100,11 +101,12 @@ function NavbarTH({ hideLanguageTranslator }) {
           <div className="flex flex-col space-y-3 text-[12px] mb-4">
             <Link to="/" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Home</Link>
             <Link to="/InfoTH" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Information</Link>
-            <Link to="/check-status" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Check Status</Link>
+            {/* <Link to="/check-status" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Check Status</Link> */}
             <Link to="/qaTH" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Q&A</Link>
-            <Link to="/Dashboard" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Dashboard</Link>
-            <Link to="/Announcement" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Announcement</Link>
-            <Link to="/Info2TH" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Draw Lots & Interviews</Link>
+            {/* <Link to="/Dashboard" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Dashboard</Link> */}
+            {/* <Link to="/Announcement" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Announcement</Link> */}
+            {/* <Link to="/Info2TH" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Draw Lots & Interviews</Link> */}
+            <a href="https://nodomain.space/" className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS#1</a>
           </div>
 
           {/* Language Switcher */}
