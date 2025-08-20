@@ -8,3 +8,4 @@ frontend/dist
 .vs/
 package-lock.json
 .env
+docker-compose.yml
