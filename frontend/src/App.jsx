@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
 import ScrollToTop from "./components/ScrollToTop";
@@ -8,11 +8,18 @@ import Region from "./components/Region";
 import Declaration from "./components/Declaration";
 import Checkstatus from "./pages/Checkstatus";
 // import NavbarTH from "./components/NavbarTH"
-// สร้าง Home component สำหรับหน้าแรก
+import NavbarUnified from "./components/UnifiedNavbar";
+import { useState } from "react";
+
+
+
+
 function Home() {
+  const [language, setLanguage] = useState("EN");
   return (
     <div className="LINESeed">
-      <Navbar />
+      {/* <Navbar /> */}
+      <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
       <ScrollToTop />
       <div>
         {/* <img src="/images/Section1.png" alt="" /> */}

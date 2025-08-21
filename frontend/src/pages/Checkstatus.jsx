@@ -4,16 +4,21 @@ import { useState } from "react";
 import SearchForm from "../components/SearchForm";
 import ProgressSteps from "../components/ProgressSteps";
 import ResultTable from "../components/ResultTable";
+import NavbarUnified from "../components/UnifiedNavbar";
+
 
 const Checkstatus = () => {
+  const [language, setLanguage] = useState("EN");
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [hasSearched, setHasSearched] = useState(false);
 
+
   return (
     <div className="Sukhumvit">
-      <NavbarTH />
+      <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
+      {/* <NavbarTH /> */}
       <div className="container mx-auto py-8 px-4 text-[#003366] mb-4 font-sukhumvit">
         <h2 className="font-serif text-2xl font-sukhumvit">
           ระบบตรวจสอบสถานะการพิจารณาโครงการ ODOS

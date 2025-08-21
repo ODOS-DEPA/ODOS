@@ -6,6 +6,7 @@ const tab_nav =  {
       { to: "/", label: "Home" },
       { to: "/InfoTH", label: "Information" },
       { to: "/qaTH", label: "Q&A" },
+      // { to: "/check-status", label: "Check Status" }
     //   { to: "/Dashboard", label: "Dashboard" },
     //   { to: "/Announcement", label: "Announcement" },
     ],
@@ -13,6 +14,7 @@ const tab_nav =  {
       { to: "/EN", label: "Home" },
       { to: "/Information", label: "Information" },
       { to: "/qaEN", label: "Q&A" },
+      // { to: "/check-status", label: "Check Status" }
     //   { to: "/Dashboard", label: "Dashboard" },
     //   { to: "/Announcement", label: "Announcement" },
     ],
@@ -36,7 +38,7 @@ function NavbarUnified({ language = "TH", setLanguage, context = "main" }) {
   const handleLanguageSwitch = (lang) => {
     setLanguage && setLanguage(lang);
     const path = location.pathname;
-    // Add your route switching logic here if needed
+
     if (lang === "EN") {
       if (path === "/") return navigate("/EN");
       if (path === "/InfoTH") return navigate("/Information");
