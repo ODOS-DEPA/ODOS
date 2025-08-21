@@ -5,10 +5,12 @@ import { useState, useEffect } from "react";
 // import Navbar from "./components/Navbar";
 // import Navbar_info from "../components/Nav_info";
 import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/FooterTH";
+// import Footer from "../components/FooterTH";
 import { Underline } from "lucide-react";
 // import NavbarTH from "../components/NavbarTH";
 import NavbarUnified from "../components/UnifiedNavbar";
+import FooterCombined from "../components/FooterCombined";
+
 
 
 function RandomInfoTH() {
@@ -154,6 +156,7 @@ function RandomInfoTH() {
       </div> */}
 
             {/* <Footer /> */}
+            <FooterCombined lang="th" />
         </div>
     );
 }

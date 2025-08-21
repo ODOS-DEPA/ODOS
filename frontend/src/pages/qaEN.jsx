@@ -2,14 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Mammoth from "mammoth";
 import { useState, useEffect } from "react";
-// import Navbar from "../components/Navbar";
-// import Navbar_info from "../components/NavQA";
 import ScrollToTop from "../components/ScrollToTop";
-
-import { Underline } from "lucide-react";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 // import NavbarTH from "../components/NavbarTH";
 import NavbarUnified from "../components/UnifiedNavbar";
+import FooterCombined from "../components/FooterCombined";
 
 function QaEN() {
   const [language, setLanguage] = useState("EN");
@@ -86,7 +83,8 @@ function QaEN() {
               <li><label htmlFor="#">A: Submit your most recent 3 semesters: the current year's Semester 1 and 2, along with the previous year’s Semester 2.</label></li>
               <br />
             </ul>
-            <div className="flex flex-col"><Footer /></div>
+            {/* <div className="flex flex-col"><Footer /></div> */}
+            <div className="flex flex-col"><FooterCombined lang="en" /></div>
           </div>
           
         </div>

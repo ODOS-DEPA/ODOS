@@ -1,10 +1,10 @@
 import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 // import NavbarDashboard from "../components/NavbarDashboard";
 // import NavbarTH from "../components/NavbarTH";
 import {useState} from "react";
 import NavbarUnified from "../components/UnifiedNavbar";
-
+import FooterCombined from "../components/FooterCombined";
 
 function Announcement() {
     const [language, setLanguage] = useState("TH");
@@ -34,7 +34,8 @@ function Announcement() {
             <br />
             <ScrollToTop />
             <div className="flex flex-col">
-                <Footer />
+                {/* <Footer /> */}
+                <FooterCombined lang="th" />
             </div>
         </div>
     );

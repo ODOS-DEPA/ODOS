@@ -1,9 +1,10 @@
 import React from "react";
 
-function Footer() {
+function FooterCombined({ lang = "en" }) {
+  const isThai = lang === "th";
+
   return (
     <div className="bg-[#2c2c2c] flex flex-col px-4 py-0">
-
       {/* Row 1: Logo + Flag Counter */}
       <div className="flex flex-row items-center justify-between">
         {/* Logo */}
@@ -12,7 +13,6 @@ function Footer() {
           alt="Logo"
           className="sm:w-[250px] sm:h-[250px]"
         />
-
         {/* Flag Counter */}
         <div className="flex justify-center my-4">
           <a href="https://info.flagcounter.com/LeL4">
@@ -27,11 +27,21 @@ function Footer() {
 
       {/* Row 2: Address */}
       <div className="text-white text-sm sm:text-xl mt-0">
-        {/* <p className="font-bold">Email: contactodos@depa.or.th</p> */}
-        <p className="font-bold">Address</p>
-        <p>234/431 Soi Ladprao 10, Ladprao Road, Chom Phon Subdistrict,</p>
-        <p>Chatuchak District, Bangkok 10900</p>
-        <p>This website is created by the Digital Economy Promotion Agency</p>
+        {isThai ? (
+          <>
+            <p className="font-bold">ที่อยู่</p>
+            <p>234/431 อาคารสำนักงานส่งเสริมเศรษฐกิจดิจิทัล (อาคาร A)</p>
+            <p>ซอยลาดพร้าว 10 ถนนลาดพร้าว แขวงจอมพล เขตจตุจักร กรุงเทพมหานคร 10900</p>
+          </>
+        ) : (
+          <>
+            {/* <p className="font-bold">Email: contactodos@depa.or.th</p> */}
+            <p className="font-bold">Address</p>
+            <p>234/431 Soi Ladprao 10, Ladprao Road, Chom Phon Subdistrict,</p>
+            <p>Chatuchak District, Bangkok 10900</p>
+            <p>This website is created by the Digital Economy Promotion Agency</p>
+          </>
+        )}
       </div>
 
       {/* Row 3: Social Icons */}
@@ -68,4 +78,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterCombined;

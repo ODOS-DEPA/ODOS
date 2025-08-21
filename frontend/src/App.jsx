@@ -1,15 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-// import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
 import ScrollToTop from "./components/ScrollToTop";
 import Region from "./components/Region";
-// import Button from "./components/Button";
 import Declaration from "./components/Declaration";
 import Checkstatus from "./pages/Checkstatus";
-// import NavbarTH from "./components/NavbarTH"
 import NavbarUnified from "./components/UnifiedNavbar";
 import { useState } from "react";
+import FooterCombined from "./components/FooterCombined";
 
 
 
@@ -38,16 +35,17 @@ function Home() {
         <br />
       </div>
       <div className="flex flex-col">
-        <Declaration />
+        <Declaration lang="en" />
       </div>
       <div className="flex flex-col">
-        <Timeline />
+        <Timeline lang="en"/>
       </div>
           <div>
               <img src="/images/homepage_sec5_partners_en.jpg" alt="" /> 
       </div>
       <div className="flex flex-col">
-        <Footer />
+
+        <FooterCombined lang="en" />
       </div>
     </div>
   );

@@ -1,15 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Mammoth from "mammoth";
 import { useState, useEffect } from "react";
-// import Navbar from "./components/Navbar";
-// import Navbar_info from "../components/NavQA";
 import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/FooterTH";
-import { Underline } from "lucide-react";
-// import NavbarTH from "../components/NavbarTH";
 import NavbarUnified from "../components/UnifiedNavbar";
-
+import FooterCombined from "../components/FooterCombined";
 
 function QaTH() {
   const [language, setLanguage] = useState("TH");
@@ -90,7 +82,8 @@ function QaTH() {
               <br />
 
             </ul>
-            <div className="flex flex-col"><Footer /></div>
+            {/* <div className="flex flex-col"><Footer /></div> */}
+            <div className="flex flex-col"><FooterCombined lang="th" /></div>
 
           </div>
         </div>
