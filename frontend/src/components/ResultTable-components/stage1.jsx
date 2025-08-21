@@ -1,32 +1,23 @@
 import React from "react";
 import Stage1Tag from "./stage-TAG/stage1-tag";
 import Stage2Tag from "./stage-TAG/stage2-tag";
+
+function getRowData(result, stageNumber) {
+  const stageKey = "stage" + stageNumber;
+  return [
+    { value: result.StudentID },
+    { value: result.Name },
+    { value: result.Surname },
+    { value: result[stageKey] || "ไม่ระบุ" }
+  ];
+}
+
+
 export default function ResultStage_1({ result }) {
   const headers = ["รหัสผู้สมัคร", "ชื่อ", "นามสกุล", "สถานะ"];
-  let currentstage;
-  switch(result.currentStatus){
-  case "1": currentstage = "stage1"; break;
-  case "2": currentstage = "stage2"; break;
-  case "3": currentstage = "stage3"; break;
-  case "4": currentstage = "stage4"; break;
-  case "5": currentstage = "stage5"; break;
-  case "6": currentstage = "stage6"; break;
-  case "7": currentstage = "stage7"; break;
-  case "8": currentstage = "stage8"; break;
-  default: currentstage = null;
-}
-  const rowData_Stage1 = [
-    { value: result.StudentID },
-    { value: result.Name },
-    { value: result.Surname },
-    { value: result[currentstage] }
-  ];
-  const rowData_Stage2 = [
-    { value: result.StudentID },
-    { value: result.Name },
-    { value: result.Surname },
-    { value: result[currentstage+1] }
-  ];
+  
+  const rowData_Stage1 = getRowData(result, 1);
+  const rowData_Stage2 = getRowData(result, 2);
 
   const renderTag = () => {
     let colorTags = {
