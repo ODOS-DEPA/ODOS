@@ -20,7 +20,7 @@ import { Navigate } from "react-router-dom";
 
 
 const root = createRoot(document.getElementById("root"));
-const targetSite = import.meta.env.VITE_DOMAIN_NAME_REDIRECT || "https://nodomain.space:8443/";
+const targetSite = import.meta.env.VITE_DOMAIN_NAME_REGISTER_FORM || "https://www.google.com/";
 
 const DocSubmittedRedirect = () => {
   useEffect(() => {
