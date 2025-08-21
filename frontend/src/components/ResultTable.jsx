@@ -25,7 +25,7 @@ const ResultTable = ({ result }) => {
                     )
           default:
             //TODO : SET IDLE
-            return (<p>{result ? JSON.stringify(result) : "ไม่มีข้อมูล"}</p>)
+            return <p>ไม่มีจ้า</p>//(<p>{result ? JSON.stringify(result) : "ไม่มีข้อมูล"}</p>)
         }
       })()
     }   
