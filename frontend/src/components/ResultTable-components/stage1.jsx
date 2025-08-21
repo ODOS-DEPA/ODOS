@@ -15,11 +15,17 @@ export default function ResultStage_1({ result }) {
   case "8": currentstage = "stage8"; break;
   default: currentstage = null;
 }
-  const rowData = [
+  const rowData_Stage1 = [
     { value: result.StudentID },
     { value: result.Name },
     { value: result.Surname },
     { value: result[currentstage] }
+  ];
+  const rowData_Stage2 = [
+    { value: result.StudentID },
+    { value: result.Name },
+    { value: result.Surname },
+    { value: result[currentstage+1] }
   ];
 
   const renderTag = () => {
@@ -34,19 +40,19 @@ export default function ResultStage_1({ result }) {
       case "ผ่าน":
         return(
             <>
-            <Stage1Tag headers={headers} rowData={rowData} colorTag={colorTags["pass"]}/>
-            <Stage2Tag headers={headers} rowData={rowData} colorTag={colorTags["onProcess"]}/>
+            <Stage1Tag headers={headers} rowData={rowData_Stage1} colorTag={colorTags["pass"]}/>
+            <Stage2Tag headers={headers} rowData={rowData_Stage2} colorTag={colorTags["onProcess"]}/>
             </>
         )
       case "ไม่ผ่าน":
         return(
-            <Stage1Tag headers={headers} rowData={rowData} colorTag={colorTags["fail"]} />
+            <Stage1Tag headers={headers} rowData={rowData_Stage1} colorTag={colorTags["fail"]} />
         )
       case "ติดเงื่อนไข":
         return(
             <>
-            <Stage1Tag headers={headers} rowData={rowData} colorTag={colorTags["condition"]}/>
-            <Stage2Tag headers={headers} rowData={rowData} colorTag={colorTags["onProcess"]}/>
+            <Stage1Tag headers={headers} rowData={rowData_Stage1} colorTag={colorTags["condition"]}/>
+            <Stage2Tag headers={headers} rowData={rowData_Stage2} colorTag={colorTags["onProcess"]}/>
             </>
         )
       default:
