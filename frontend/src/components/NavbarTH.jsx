@@ -75,7 +75,7 @@ function NavbarTH({ hideLanguageTranslator }) {
             {/* <Link to="/Dashboard" className="hover:text-gray-600 transition-colors whitespace-nowrap">Dashboard</Link> */}
             {/* <Link to="/Announcement" className="hover:text-gray-600 transition-colors whitespace-nowrap">Announcement</Link> */}
             {/* <Link to="/Info2TH" className="hover:text-gray-600 transition-colors whitespace-nowrap">Draw Lots & Interviews</Link> */}
-                        <a href="https://nodomain.space/" className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS#1</a>
+            <a href={import.meta.env.VITE_DOMAIN_NAME_REDIRECT} className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS#1</a>
           </div>
           <div className="text-[10px] sm:text-[11px] lg:text-[12px] xl:text-[13px]">
             <button
@@ -106,7 +106,7 @@ function NavbarTH({ hideLanguageTranslator }) {
             {/* <Link to="/Dashboard" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Dashboard</Link> */}
             {/* <Link to="/Announcement" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Announcement</Link> */}
             {/* <Link to="/Info2TH" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Draw Lots & Interviews</Link> */}
-            <a href="https://nodomain.space/" className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS#1</a>
+            <a href={import.meta.env.VITE_DOMAIN_NAME_REDIRECT} className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS#1</a>
           </div>
 
           {/* Language Switcher */}
