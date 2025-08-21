@@ -20,7 +20,7 @@ import { Navigate } from "react-router-dom";
 
 
 const root = createRoot(document.getElementById("root"));
-const targetSite = 'https://www.citydata.in.th/'
+const targetSite = import.meta.env.VITE_DOMAIN_VERSION_1 || "www.google.com"
 
 const DocSubmittedRedirect = () => {
   useEffect(() => {
