@@ -13,11 +13,10 @@ function Home() {
   const [language, setLanguage] = useState("EN");
   return (
     <div className="LINESeed">
-      {/* <Navbar /> */}
       <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
+
       <ScrollToTop />
       <div>
-        {/* <img src="/images/Section1.png" alt="" /> */}
         <img src="/images/homepage_sec1_banner_en.jpg" alt="" />
       </div>
       <div>
