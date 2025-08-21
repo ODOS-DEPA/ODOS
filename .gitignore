@@ -5,3 +5,6 @@ dist
 frontend/dist
 .DS_Store
 .vs/
+package-lock.json
+.env
+

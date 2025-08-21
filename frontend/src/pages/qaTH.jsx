@@ -3,19 +3,21 @@ import { Link } from "react-router-dom";
 import Mammoth from "mammoth";
 import { useState, useEffect } from "react";
 // import Navbar from "./components/Navbar";
-import Navbar_info from "../components/NavQA";
+// import Navbar_info from "../components/NavQA";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/FooterTH";
 import { Underline } from "lucide-react";
-import NavbarTH from "../components/NavbarTH";
+// import NavbarTH from "../components/NavbarTH";
+import NavbarUnified from "../components/UnifiedNavbar";
 
 
 function QaTH() {
-
+  const [language, setLanguage] = useState("TH");
   return (
     <div className="LINESeed">
 
-      <NavbarTH />
+      {/* <NavbarTH /> */}
+      <NavbarUnified language={language} setLanguage={setLanguage} />
       <ScrollToTop />
       <div>
         <img src="/images/info_sec1_banner_th.jpg" alt="" />

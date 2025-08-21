@@ -1,6 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from 'react';
+
 import Checkstatus from "./pages/Checkstatus.jsx";
 import App from "./App.jsx";
 import Captcha from "./pages/Captcha.jsx";
@@ -14,8 +16,20 @@ import QaEN from "./pages/qaEN.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Announcement from "./pages/Announcement.jsx";
 import RandomInfoTH from "./pages/RandomSlot_TH.jsx";
+import { Navigate } from "react-router-dom";
+
 
 const root = createRoot(document.getElementById("root"));
+const targetSite = import.meta.env.VITE_DOMAIN_NAME_REGISTER_FORM || "https://www.google.com/";
+
+const DocSubmittedRedirect = () => {
+  useEffect(() => {
+    console.log("Redirecting to external site...");
+    window.location.href = targetSite;
+  }, []);
+
+  return null;  // No content is rendered
+};
 
 root.render(
   <StrictMode>
@@ -39,7 +53,8 @@ root.render(
         {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
         {/* <Route path="/Announcement" element={<Announcement />} /> */}
         {/* <Route path="/Info2TH" element={<RandomInfoTH />} /> */}
-
+        <Route path="/odosform" element={<DocSubmittedRedirect />} />
+        
         {/* เส้นทางที่ต้องตรวจสอบ CAPTCHA */}
         <Route
   path="/check-status"

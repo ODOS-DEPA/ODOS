@@ -1,11 +1,16 @@
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
-import NavbarDashboard from "../components/NavbarDashboard";
-import NavbarTH from "../components/NavbarTH";
+// import NavbarDashboard from "../components/NavbarDashboard";
+// import NavbarTH from "../components/NavbarTH";
+import {useState} from "react";
+import NavbarUnified from "../components/UnifiedNavbar";
+
+
 function Announcement() {
+    const [language, setLanguage] = useState("TH");
     return (
         <div className="LINESeed">
-            <NavbarTH />
+            <NavbarUnified language={language} setLanguage={setLanguage} />
             <br />
             <br />
             <div>
