@@ -1,21 +1,24 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import NavbarTH from "../components/NavbarTH";
+import { useState } from "react";
+// import NavbarTH from "../components/NavbarTH";
 import FooterTH from "../components/FooterTH";
 import TimelineTH from "../components/TimelineTH";
 import ScrollToTop from "../components/ScrollToTop";
 import Region from "../components/Region";
 // import Button from "../components/Button";
 import DeclarationTH from "../components/DeclareTH";
+import NavbarUnified from "../components/UnifiedNavbar";
 
 function TH() {
+    const [language, setLanguage] = useState("TH");
+
     return (
 
         <div className="LINESeed">
 
-
-
-            <NavbarTH />
+            {/* <NavbarTH /> */}
+            <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
             <ScrollToTop />
             <div>
                 {/* <img src="/images/ODOS Website_Detail_Section 1.jpg" alt="" /> */}

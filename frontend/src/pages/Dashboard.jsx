@@ -1,11 +1,18 @@
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
-import NavbarDashboard from "../components/NavbarDashboard";
-import NavbarTH from "../components/NavbarTH";
+// import NavbarDashboard from "../components/NavbarDashboard";
+// import NavbarTH from "../components/NavbarTH";
+import NavbarUnified from "../components/UnifiedNavbar";
+import { useState } from "react";
+
+
 function Dashboard() {
+    const [language, setLanguage] = useState("TH");
     return (
         <div className="LINESeed">
-            <NavbarTH />
+            {/* <NavbarTH /> */}
+            <NavbarUnified language={language} setLanguage={setLanguage} />
+
             <br />
             <br />
             <div className="h-screen flex items-center justify-center p-10">

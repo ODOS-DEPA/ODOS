@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import NavbarTH from "../components/NavbarTH";
+// import NavbarTH from "../components/NavbarTH";
 import SearchForm from "../components/SearchForm";
 import ProgressSteps from "../components/ProgressSteps";
 import ResultTable from "../components/ResultTable";

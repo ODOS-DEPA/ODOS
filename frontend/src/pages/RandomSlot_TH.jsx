@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 import Mammoth from "mammoth";
 import { useState, useEffect } from "react";
 // import Navbar from "./components/Navbar";
-import Navbar_info from "../components/Nav_info";
+// import Navbar_info from "../components/Nav_info";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/FooterTH";
 import { Underline } from "lucide-react";
-import NavbarTH from "../components/NavbarTH";
+// import NavbarTH from "../components/NavbarTH";
+import NavbarUnified from "../components/UnifiedNavbar";
+
+
 function RandomInfoTH() {
     const data = [
         { country: "เครือรัฐออสเตรเลีย", university: "University of Technology Sydney & Macquarie University", count: 140, date: "18 ต.ค. – 29 พ.ย." },
@@ -29,9 +32,14 @@ function RandomInfoTH() {
     ];
 
     const total = data.reduce((sum, item) => sum + item.count, 0);
+    const [language, setLanguage] = useState("TH");
+
     return (
+
         <div className="LINESeed">
-            <NavbarTH />
+            {/* <NavbarTH /> */}
+            <NavbarUnified language={language} setLanguage={setLanguage} />
+
             <ScrollToTop />
 
             <div>

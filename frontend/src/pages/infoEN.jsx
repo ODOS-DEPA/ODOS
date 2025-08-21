@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
+import NavbarUnified from "../components/UnifiedNavbar";
+import {useState} from "react";
 
 
 /**
@@ -214,9 +216,12 @@ const otherSectionsData = [
 
 // --- Main Component ---
 function InfoEN() {
+  const [language, setLanguage] = useState("EN");
+
   return (
     <div className="LINESeed">
-      <Navbar />
+      {/* <Navbar /> */}
+      <NavbarUnified language={language} setLanguage={setLanguage} />
       <ScrollToTop />
       
       <div>
