@@ -13,7 +13,6 @@ const ResultTable = ({ result }) => {
       <RefreshPages/>
     </div> 
     {
-      console.log(result)
       (() => {
         switch (result.currentStatus) {
           case "1":
