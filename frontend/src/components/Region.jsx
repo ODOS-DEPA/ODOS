@@ -21,36 +21,36 @@ function Region() {
         {
             name: "North America",
             countries: [
-                { code: "USA", images: ["/images/Slide16.JPG"] },
+                { code: "USA", images: ["/images/programes/Slide16.JPG"] },
             ],
         },
         {
             name: "Europe",
             countries: [
-                { code: "UK", images: ["/images/Slide13.JPG", "/images/Slide14.JPG", "/images/Slide15.JPG"] },
-                { code: "Finland", images: ["/images/Slide7.JPG", "/images/Slide8.JPG"] },
-                { code: "Estonia", images: ["/images/Slide6.JPG"] },
+                { code: "UK", images: ["/images/programes/Slide13.JPG", "/images/programes/Slide14.JPG", "/images/programes/Slide15.JPG"] },
+                { code: "Finland", images: ["/images/programes/Slide7.JPG", "/images/programes/Slide8.JPG"] },
+                { code: "Estonia", images: ["/images/programes/Slide6.JPG"] },
             ],
         },
         {
             name: "Australia",
             countries: [
-                { code: "Australia", images: ["/images/Slide1.JPG"] },
+                { code: "Australia", images: ["/images/programes/Slide1.JPG"] },
             ],
         },
         {
             name: "Asia",
             countries: [
-                { code: "China", images: ["/images/Slide2.JPG", "/images/Slide3.JPG", "/images/Slide4.JPG", "/images/Slide5.JPG"] },
-                { code: "Japan", images: ["/images/Slide9.JPG", "/images/Slide10.JPG"] },
-                { code: "Korea", images: ["/images/Slide12.JPG"] },
-                { code: "Singapore", images: ["/images/Slide11.JPG"] },
+                { code: "China", images: ["/images/programes/Slide2.JPG", "/images/programes/Slide3.JPG", "/images/programes/Slide4.JPG", "/images/programes/Slide5.JPG"] },
+                { code: "Japan", images: ["/images/programes/Slide9.JPG", "/images/programes/Slide10.JPG"] },
+                { code: "Korea", images: ["/images/programes/Slide12.JPG"] },
+                { code: "Singapore", images: ["/images/programes/Slide11.JPG"] },
             ],
         },
     ];
 
     return (
-        <div className="w-full h-auto p-5 bg-[url('/images/ODOS%20Website_EN_BG%20Section%202.png')] bg-cover bg-center">
+        <div className="w-full h-auto p-5 bg-[url('/images/homepage_sec2_yellow_en_th.png')] bg-cover bg-center">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
                 {regions.map((region, index) => (
                     <div key={index} className="text-center">

@@ -4,28 +4,28 @@ import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
 import ScrollToTop from "./components/ScrollToTop";
 import Region from "./components/Region";
-import Button from "./components/Button";
+// import Button from "./components/Button";
 import Declaration from "./components/Declaration";
 import Checkstatus from "./pages/Checkstatus";
-import NavbarTH from "./components/NavbarTH"
+// import NavbarTH from "./components/NavbarTH"
 // สร้าง Home component สำหรับหน้าแรก
 function Home() {
   return (
     <div className="LINESeed">
-      <NavbarTH />
+      <Navbar />
       <ScrollToTop />
       <div>
         {/* <img src="/images/Section1.png" alt="" /> */}
-        <img src="/images/Section 1-en.jpg" alt="" />
+        <img src="/images/homepage_sec1_banner_en.jpg" alt="" />
       </div>
       <div>
-        <img src="/images/ODOS Website_EN_Section 2_0.jpg" alt="" />
+        <img src="/images/homepage_sec2_en.jpg" alt="" />
       </div>
       <div className="flex flex-col justify-center items-center">
         {/* <br />
         <br /> */}
         <Region />
-              <img src="/images/ODOS Website_EN_V3_Section 3 - 4.jpg" alt="" />
+              <img src="/images/homepage_sec3_en.jpg" alt="" />
         {/* <Button /> */}
         <br />
         <br />
@@ -37,7 +37,7 @@ function Home() {
         <Timeline />
       </div>
           <div>
-              <img src="/images/ODOS Website_Partners_26072025_Partners_EN.jpg" alt="" /> 
+              <img src="/images/homepage_sec5_partners_en.jpg" alt="" /> 
       </div>
       <div className="flex flex-col">
         <Footer />
@@ -52,7 +52,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/checkstatus" element={<Checkstatus />} />
       {/* เพิ่ม routes อื่นๆ ตามต้องการ */}
-      {/* <Route path="/InfoTH" element={<InfoTH />} />
+      {/* <Route path="/InfoTH" element={<InfoTH />}  jjjj/>
       <Route path="/qaTH" element={<QaTH />} />
       <Route path="/Dashboard" element={<Dashboard />} /> */}
     </Routes>

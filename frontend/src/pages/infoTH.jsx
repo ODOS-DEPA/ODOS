@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Mammoth from "mammoth";
 import ScrollToTop from "../components/ScrollToTop";
 import Footer from "../components/FooterTH";
 import NavbarTH from "../components/NavbarTH";
@@ -216,7 +215,7 @@ function InfoTH() {
         <ScrollToTop />
         
         <div>
-          <img src="/images/ODOS Website_Detail_Section 1.jpg" alt="แบนเนอร์โครงการ" />
+          <img src="/images/info_sec1_banner_th.jpg" alt="แบนเนอร์โครงการ" />
         </div>
   
         <TestPrepSection />

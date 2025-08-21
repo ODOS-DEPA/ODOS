@@ -19,7 +19,7 @@ function NavbarTH({ hideLanguageTranslator }) {
   if (lang === "EN") {
     if (path === "/") return navigate("/EN");
     if (path === "/InfoTH") return navigate("/Information");
-    if (path === "/qaTH") return navigate("/qa");
+    if (path === "/qaTH") return navigate("/qaEN");
     if (path === "/Info2TH") return navigate("/Information");
     if (path === "/Dashboard") return navigate("/Dashboard");
     if (path === "/Announcement") return navigate("/Announcement");
@@ -29,7 +29,7 @@ function NavbarTH({ hideLanguageTranslator }) {
   if (lang === "TH") {
     if (path === "/EN") return navigate("/");
     if (path === "/Information") return navigate("/InfoTH");
-    if (path === "/qa") return navigate("/qaTH");
+    if (path === "/qaEN") return navigate("/qaTH");
     if (path === "/Dashboard") return navigate("/Dashboard");
     if (path === "/Announcement") return navigate("/Announcement");
     return navigate("/");
@@ -42,7 +42,7 @@ function NavbarTH({ hideLanguageTranslator }) {
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         {/* Desktop Logo */}
         <img
-          src="/images/Logo ODOS and KV_Monochome_Black.png"
+          src="/images/icons/Logo ODOS and KV_Monochome_Black.png"
           alt="Logo ODOS"
           className="hidden md:block h-16 w-16 lg:h-20 lg:w-20 xl:h-24 xl:w-24"
         />
@@ -50,7 +50,7 @@ function NavbarTH({ hideLanguageTranslator }) {
         {/* Mobile Layout */}
         <div className="flex md:hidden items-center justify-between w-full">
           <img
-            src="/images/Logo ODOS and KV_Monochome_Black.png"
+            src="/images/icons/Logo ODOS and KV_Monochome_Black.png"
             alt="Logo ODOS"
             className="h-12 w-12"
           />
@@ -70,11 +70,12 @@ function NavbarTH({ hideLanguageTranslator }) {
           <div className="flex gap-3 lg:gap-4 xl:gap-6 text-[10px] sm:text-[11px] lg:text-[12px] xl:text-[13px] pr-3 lg:pr-4">
             <Link to="/" className="hover:text-gray-600 transition-colors whitespace-nowrap">Home</Link>
             <Link to="/InfoTH" className="hover:text-gray-600 transition-colors whitespace-nowrap">Information</Link>
-            <Link to="/check-status" className="hover:text-gray-600 transition-colors whitespace-nowrap">Check Status</Link>
+            {/* <Link to="/check-status" className="hover:text-gray-600 transition-colors whitespace-nowrap">Check Status</Link> */}
             <Link to="/qaTH" className="hover:text-gray-600 transition-colors whitespace-nowrap">Q&A</Link>
-            <Link to="/Dashboard" className="hover:text-gray-600 transition-colors whitespace-nowrap">Dashboard</Link>
-            <Link to="/Announcement" className="hover:text-gray-600 transition-colors whitespace-nowrap">Announcement</Link>
-            <Link to="/Info2TH" className="hover:text-gray-600 transition-colors whitespace-nowrap">Draw Lots & Interviews</Link>
+            {/* <Link to="/Dashboard" className="hover:text-gray-600 transition-colors whitespace-nowrap">Dashboard</Link> */}
+            {/* <Link to="/Announcement" className="hover:text-gray-600 transition-colors whitespace-nowrap">Announcement</Link> */}
+            {/* <Link to="/Info2TH" className="hover:text-gray-600 transition-colors whitespace-nowrap">Draw Lots & Interviews</Link> */}
+                        <a href="https://nodomain.space/" className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS#1</a>
           </div>
           <div className="text-[10px] sm:text-[11px] lg:text-[12px] xl:text-[13px]">
             <button
@@ -100,11 +101,12 @@ function NavbarTH({ hideLanguageTranslator }) {
           <div className="flex flex-col space-y-3 text-[12px] mb-4">
             <Link to="/" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Home</Link>
             <Link to="/InfoTH" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Information</Link>
-            <Link to="/check-status" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Check Status</Link>
+            {/* <Link to="/check-status" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Check Status</Link> */}
             <Link to="/qaTH" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Q&A</Link>
-            <Link to="/Dashboard" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Dashboard</Link>
-            <Link to="/Announcement" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Announcement</Link>
-            <Link to="/Info2TH" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Draw Lots & Interviews</Link>
+            {/* <Link to="/Dashboard" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Dashboard</Link> */}
+            {/* <Link to="/Announcement" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Announcement</Link> */}
+            {/* <Link to="/Info2TH" className="hover:text-gray-600 transition-colors py-1" onClick={() => setIsMenuOpen(false)}>Draw Lots & Interviews</Link> */}
+            <a href="https://nodomain.space/" className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS#1</a>
           </div>
 
           {/* Language Switcher */}

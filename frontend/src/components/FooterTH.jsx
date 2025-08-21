@@ -8,7 +8,7 @@ function Footer() {
       <div className="flex flex-row items-center justify-between">
         {/* Logo */}
         <img
-          src="\images\Logo ODOS and KV_Monochome_White.png"
+          src="/images/icons/Logo ODOS and KV_Monochome_White.png"
           alt="Logo"
           className="sm:w-[250px] sm:h-[250px]"
         />
@@ -40,7 +40,7 @@ function Footer() {
           rel="noopener noreferrer"
         >
           <img
-            src="/images/FBIcon.png"
+            src="/images/icons/FBIcon.png"
             alt="Facebook"
             className="w-[25px] h-[25px] sm:w-[50px] sm:h-[50px]"
           />
@@ -51,7 +51,7 @@ function Footer() {
           rel="noopener noreferrer"
         >
           <img
-            src="/images/TikTokIcon.png"
+            src="/images/icons/TikTokIcon.png"
             alt="TikTok"
             className="w-[25px] h-[25px] sm:w-[50px] sm:h-[50px]"
           />

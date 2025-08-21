@@ -40,7 +40,7 @@ export default defineConfig({
     port: Number(process.env.FRONT_PORT) || 5173,
   },
   define: {
-    'import.meta.env.VITE_DOMAIN_NAME': JSON.stringify(process.env.VITE_DOMAIN_NAME)
-
+    'import.meta.env.VITE_DOMAIN_NAME': JSON.stringify(process.env.VITE_DOMAIN_NAME),
+    'import.meta.env.VITE_DOMAIN_BACKEND_PORT': JSON.stringify(process.env.VITE_DOMAIN_BACKEND_PORT),
   },
 });
