@@ -27,7 +27,7 @@ export default function ResultStage_1({ result }) {
         "onProcess" : "bg-yellow-600 text-white text-center text-xs sm:text-sm font-medium" ,
 
     }
-    switch (result[currentstage]) {
+    switch (result['stage1']) {
       case "ผ่าน":
         return(
             <>
