@@ -40,7 +40,7 @@ const SearchForm = ({ setResult, setError, setIsLoading, setHasSearched, isLoadi
       if (!response.ok) throw new Error("ไม่พบข้อมูล หรือเกิดข้อผิดพลาด");
 
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
       if (data.error) {
         setError(data.error);
         setResult(null);
