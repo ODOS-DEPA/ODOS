@@ -1,66 +1,47 @@
-import { Routes, Route } from "react-router-dom";
-import Timeline from "./components/Timeline";
-import ScrollToTop from "./components/ScrollToTop";
-import Region from "./components/Region";
-import Declaration from "./components/Declaration";
-import Checkstatus from "./pages/Checkstatus";
-import NavbarUnified from "./components/UnifiedNavbar";
-import { useState } from "react";
-import FooterCombined from "./components/FooterCombined";
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import Checkstatus from "./pages/Checkstatus.jsx";
+import Captcha from "./pages/Captcha.jsx";
+import Maintenance from "./pages/Maintenance.jsx";
+import TH from "./pages/TH.jsx";
+import Information from "./pages/infoEN.jsx";
+import InfoTH from "./pages/infoTH.jsx";
+import QaTH from "./pages/qaTH.jsx";
+import QaEN from "./pages/qaEN.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import Announcement from "./pages/Announcement.jsx";
+import RandomInfoTH from "./pages/RandomSlot_TH.jsx";
+import Home from "./pages/Home.jsx";
 
+const targetSite = import.meta.env.VITE_DOMAIN_NAME_REGISTER_FORM || "https://www.google.com/";
 
-
-function Home() {
-  const [language, setLanguage] = useState("EN");
-  return (
-    <div className="LINESeed">
-      {/* <Navbar /> */}
-      <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
-      <ScrollToTop />
-      <div>
-        {/* <img src="/images/Section1.png" alt="" /> */}
-        <img src="/images/homepage_sec1_banner_en.jpg" alt="" />
-      </div>
-      <div>
-        <img src="/images/homepage_sec2_en.jpg" alt="" />
-      </div>
-      <div className="flex flex-col justify-center items-center">
-        {/* <br />
-        <br /> */}
-        <Region />
-              <img src="/images/homepage_sec3_en.jpg" alt="" />
-        {/* <Button /> */}
-        <br />
-        <br />
-      </div>
-      <div className="flex flex-col">
-        <Declaration lang="en" />
-      </div>
-      <div className="flex flex-col">
-        <Timeline lang="en"/>
-      </div>
-          <div>
-              <img src="/images/homepage_sec5_partners_en.jpg" alt="" /> 
-      </div>
-      <div className="flex flex-col">
-
-        <FooterCombined lang="en" />
-      </div>
-    </div>
-  );
-}
+const DocSubmittedRedirect = () => {
+  useEffect(() => {
+    window.location.href = targetSite;
+  }, []);
+  return null;
+};
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/checkstatus" element={<Checkstatus />} />
-      {/* เพิ่ม routes อื่นๆ ตามต้องการ */}
-      {/* <Route path="/InfoTH" element={<InfoTH />}  jjjj/>
-      <Route path="/qaTH" element={<QaTH />} />
-      <Route path="/Dashboard" element={<Dashboard />} /> */}
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/EN" element={<Home />} />
+        <Route path="/" element={<TH />} />
+        <Route path="/Maintenance" element={<Maintenance />} />
+        <Route path="/Information" element={<Information />} />
+        <Route path="/infoTH" element={<InfoTH />} />
+        <Route path="/qaTH" element={<QaTH />} />
+        <Route path="/qaEN" element={<QaEN />} />
+        {/* Uncomment these if needed */}
+        {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
+        {/* <Route path="/Announcement" element={<Announcement />} /> */}
+        {/* <Route path="/Info2TH" element={<RandomInfoTH />} /> */}
+        <Route path="/odosform" element={<DocSubmittedRedirect />} />
+        <Route path="/check-status" element={<Checkstatus />} />
+      </Routes>
+    </Router>
   );
 }
 
