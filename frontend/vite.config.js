@@ -7,8 +7,8 @@ import dotenv from "dotenv";
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
 
 // ✅ debug
-console.log("VITE_FRONT_HOST =", process.env.VITE_FRONT_HOST);
-console.log("VITE_FRONT_PORT =", process.env.VITE_FRONT_PORT);
+//console.log("VITE_FRONT_HOST =", process.env.VITE_FRONT_HOST);
+//console.log("VITE_FRONT_PORT =", process.env.VITE_FRONT_PORT);
 
 export default defineConfig({
   plugins: [react()],
