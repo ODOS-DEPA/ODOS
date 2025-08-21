@@ -19,7 +19,7 @@ const SearchForm = ({ setResult, setError, setIsLoading, setHasSearched, isLoadi
     }
 
     // validate verifyCode
-    if (!/^\d{11}$/.test(trimmedVerifyCode)) {
+    if (!/^.{11}$/.test(trimmedVerifyCode)) {
       setError("กรุณากรอกรหัสยืนยัน 11 หลักให้ถูกต้อง");
       setResult(null);
       setHasSearched(true);
