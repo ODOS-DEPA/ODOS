@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-// import NavbarTH from "../components/NavbarTH";
 import SearchForm from "../components/SearchForm";
 import ProgressSteps from "../components/ProgressSteps";
 import ResultTable from "../components/ResultTable";
@@ -18,7 +17,6 @@ const Checkstatus = () => {
   return (
     <div className="Sukhumvit">
       <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
-      {/* <NavbarTH /> */}
       <div className="container mx-auto py-8 px-4 text-[#003366] mb-4 font-sukhumvit">
         <h2 className="font-serif text-2xl font-sukhumvit">
           ระบบตรวจสอบสถานะการพิจารณาโครงการ ODOS

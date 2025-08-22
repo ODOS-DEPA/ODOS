@@ -19,8 +19,8 @@ const SearchForm = ({ setResult, setError, setIsLoading, setHasSearched, isLoadi
     }
 
     // validate verifyCode
-    if (!/^\d{10}$/.test(trimmedVerifyCode)) {
-      setError("กรุณากรอกรหัสยืนยัน 10 หลักให้ถูกต้อง");
+    if (!/^.{11}$/.test(trimmedVerifyCode)) {
+      setError("กรุณากรอกรหัสยืนยัน 11 หลักให้ถูกต้อง");
       setResult(null);
       setHasSearched(true);
       setIsLoading(false);
@@ -40,7 +40,7 @@ const SearchForm = ({ setResult, setError, setIsLoading, setHasSearched, isLoadi
       if (!response.ok) throw new Error("ไม่พบข้อมูล หรือเกิดข้อผิดพลาด");
 
       const data = await response.json();
-      console.log(data);
+      //console.log(data);
       if (data.error) {
         setError(data.error);
         setResult(null);

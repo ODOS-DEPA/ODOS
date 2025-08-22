@@ -14,7 +14,7 @@ import Announcement from "./pages/Announcement.jsx";
 import RandomInfoTH from "./pages/RandomSlot_TH.jsx";
 import Home from "./pages/Home.jsx";
 
-const targetSite = import.meta.env.VITE_DOMAIN_NAME_REGISTER_FORM || "https://www.google.com/";
+var targetSite = import.meta.env.VITE_DOMAIN_NAME_REGISTER_FORM || "https://www.google.com/";
 
 const DocSubmittedRedirect = () => {
   useEffect(() => {

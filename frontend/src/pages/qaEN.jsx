@@ -1,10 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Mammoth from "mammoth";
 import { useState, useEffect } from "react";
 import ScrollToTop from "../components/ScrollToTop";
-// import Footer from "../components/Footer";
-// import NavbarTH from "../components/NavbarTH";
 import NavbarUnified from "../components/UnifiedNavbar";
 import FooterCombined from "../components/FooterCombined";
 
