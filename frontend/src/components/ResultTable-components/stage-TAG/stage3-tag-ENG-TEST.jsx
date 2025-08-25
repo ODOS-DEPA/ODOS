@@ -50,7 +50,7 @@ export default function Stage3Tag_ENG_TEST({ StudentID, headers, colorTag }) {
 
                   {/* รหัสเข้าสอบ (แสดงเป็น ●●●●) */}
                   <td className={cellClass}>
-                    {"●".repeat(tokenENG?.length || 6)}
+                    {tokenENG}
                   </td>
 
                   {/* คู่มือการสอบ */}
