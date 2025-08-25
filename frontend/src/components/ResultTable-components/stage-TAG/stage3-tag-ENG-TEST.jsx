@@ -6,7 +6,7 @@ import Axios from "axios"
 async function StudentEnglishScore(studentID) {
   try {
     const domain = import.meta.env.VITE_DOMAIN_NAME || "nodomain.space";
-    const response = await Axios.get(`https://${domain}:8443/students/${studentID}`);
+    const response = await Axios.get(`https://${domain}:8443/EnglishScore/${studentID}`);
     const StudentsInfo = response.data;  // สมมติข้อมูลอยู่ที่ .data
     return StudentsInfo;
   } catch (error) {

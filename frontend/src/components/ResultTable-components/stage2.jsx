@@ -46,7 +46,7 @@ export default function ResultStage_2({ result }) {
         return(
             <>
             <Stage2Tag headers={headers_tag2} rowData={rowData_Stage2} colorTag={colorTags["condition"]}/>
-            <Stage3Tag_ENG_TEST StudentID={result.StudentID} headers={headers_tag3_ENG_TEST} rowData={rowData_Stage3} colorTag={colorTags["onProcess"]}/>
+            <Stage3Tag_ENG_TEST StudentID={result.StudentID} headers={headers_tag3_ENG_TEST} colorTag={colorTags["onProcess"]}/>
             <Stage3Tag_TECH_TEST/>
             </>
         )
