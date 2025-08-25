@@ -35,7 +35,7 @@ export default function ResultStage_2({ result }) {
             <>
             <Stage2Tag headers={headers_tag2} rowData={rowData_Stage2} colorTag={colorTags["pass"]}/>
             <Stage3Tag_ENG_TEST StudentID={result.StudentID} headers={headers_tag3_ENG_TEST} colorTag={colorTags["onProcess"]}/>
-            <Stage3Tag_TECH_TEST/>
+            <Stage3Tag_TECH_TEST StudentID={result.StudentID} headers={headers_tag3_TECHNICAL_TEST} colorTag={colorTags["onProcess"]}/>
             </>
         )
       case "ไม่ผ่าน":
@@ -47,6 +47,7 @@ export default function ResultStage_2({ result }) {
             <>
             <Stage2Tag headers={headers_tag2} rowData={rowData_Stage2} colorTag={colorTags["condition"]}/>
             <Stage3Tag_ENG_TEST StudentID={result.StudentID} headers={headers_tag3_ENG_TEST} colorTag={colorTags["onProcess"]}/>
+            <Stage3Tag_TECH_TEST StudentID={result.StudentID} headers={headers_tag3_TECHNICAL_TEST} colorTag={colorTags["onProcess"]}/>
             <Stage3Tag_TECH_TEST/>
             </>
         )

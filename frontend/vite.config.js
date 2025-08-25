@@ -14,6 +14,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: process.env.VITE_FRONT_HOST || "localhost",
-    port: Number(process.env.VITE_FRONT_PORT) || 5173,
+    port: Number(process.env.VITE_FRONT_PORT) || 3000,
   },
 });
