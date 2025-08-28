@@ -34,7 +34,7 @@ function App() {
         <Route path="/infoTH" element={<InfoTH />} />
         <Route path="/qaTH" element={<QaTH />} />
         <Route path="/qaEN" element={<QaEN />} />
-        {/* Uncomment these if needed */}
+  
         {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
         {/* <Route path="/Announcement" element={<Announcement />} /> */}
         {/* <Route path="/Info2TH" element={<RandomInfoTH />} /> */}
