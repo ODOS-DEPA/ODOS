@@ -4,7 +4,7 @@ import Axios from "axios";
 // ฟังก์ชันดึงข้อมูลคะแนนอังกฤษ
 async function StudentEnglishScore(studentID) {
   try {
-    const domain = import.meta.env.VITE_DOMAIN_NAME || "odos1.citydata.in.th";
+    const domain = import.meta.env.VITE_DB_DOMAIN_NAM || "odos1.citydata.in.th";
     const response = await Axios.get(
       `https://${domain}:8443/EnglishScore/${studentID}`
     );
