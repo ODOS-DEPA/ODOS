@@ -32,7 +32,7 @@ const Checkstatus = () => {
 
         {/* error message */}
         {error && <p className="mt-4 text-red-600">{error}</p>}
-        {console.log(result)}
+        {/* {console.log(result)} */}
         {/* loading */}
         {isLoading && <p className="mt-4 text-gray-600">กำลังโหลด...</p>}
 

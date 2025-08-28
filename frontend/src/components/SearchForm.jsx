@@ -34,7 +34,7 @@ const SearchForm = ({ setResult, setError, setIsLoading, setHasSearched, isLoadi
 
     try {
       const response = await fetch(
-        `https://${import.meta.env.VITE_DOMAIN_NAME || "nodomain.space"}:8443/students/${trimmedId}`
+        `https://${import.meta.env.VITE_DB_DOMAIN_NAME || "odos1.citydata.in.th"}:8443/students/${trimmedId}`
       );
 
       if (!response.ok) throw new Error("ไม่พบข้อมูล หรือเกิดข้อผิดพลาด");

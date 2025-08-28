@@ -1,26 +1,23 @@
 import React from "react";
 import Stage1Tag from "./stage-TAG/stage1-tag";
 import Stage2Tag from "./stage-TAG/stage2-tag";
-export default function ResultStage_1({ result }) {
-  const headers = ["รหัสผู้สมัคร", "ชื่อ", "นามสกุล", "สถานะ"];
-  let currentstage;
-  switch(result.currentStatus){
-  case "1": currentstage = "stage1"; break;
-  case "2": currentstage = "stage2"; break;
-  case "3": currentstage = "stage3"; break;
-  case "4": currentstage = "stage4"; break;
-  case "5": currentstage = "stage5"; break;
-  case "6": currentstage = "stage6"; break;
-  case "7": currentstage = "stage7"; break;
-  case "8": currentstage = "stage8"; break;
-  default: currentstage = null;
-}
-  const rowData = [
+
+function getRowData(result, stageNumber) {
+  const stageKey = "stage" + stageNumber;
+  return [
     { value: result.StudentID },
     { value: result.Name },
     { value: result.Surname },
-    { value: result[currentstage] }
+    { value: result[stageKey] || "ไม่ระบุ" }
   ];
+}
+
+
+export default function ResultStage_1({ result }) {
+  const headers = ["รหัสผู้สมัคร", "ชื่อ", "นามสกุล", "สถานะ"];
+  
+  const rowData_Stage1 = getRowData(result, 1);
+  const rowData_Stage2 = getRowData(result, 2);
 
   const renderTag = () => {
     let colorTags = {
@@ -30,23 +27,23 @@ export default function ResultStage_1({ result }) {
         "onProcess" : "bg-yellow-600 text-white text-center text-xs sm:text-sm font-medium" ,
 
     }
-    switch (result[currentstage]) {
+    switch (result['stage1']) {
       case "ผ่าน":
         return(
             <>
-            <Stage1Tag headers={headers} rowData={rowData} colorTag={colorTags["pass"]}/>
-            <Stage2Tag headers={headers} rowData={rowData} colorTag={colorTags["onProcess"]}/>
+            <Stage1Tag headers={headers} rowData={rowData_Stage1} colorTag={colorTags["pass"]}/>
+            <Stage2Tag headers={headers} rowData={rowData_Stage2} colorTag={colorTags["onProcess"]}/>
             </>
         )
       case "ไม่ผ่าน":
         return(
-            <Stage1Tag headers={headers} rowData={rowData} colorTag={colorTags["fail"]} />
+            <Stage1Tag headers={headers} rowData={rowData_Stage1} colorTag={colorTags["fail"]} />
         )
       case "ติดเงื่อนไข":
         return(
             <>
-            <Stage1Tag headers={headers} rowData={rowData} colorTag={colorTags["condition"]}/>
-            <Stage2Tag headers={headers} rowData={rowData} colorTag={colorTags["onProcess"]}/>
+            <Stage1Tag headers={headers} rowData={rowData_Stage1} colorTag={colorTags["condition"]}/>
+            <Stage2Tag headers={headers} rowData={rowData_Stage2} colorTag={colorTags["onProcess"]}/>
             </>
         )
       default:

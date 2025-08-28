@@ -3,7 +3,7 @@ import Axios from "axios";
 
 async function StudentTECHScore(studentID) {
   try {
-    const domain = import.meta.env.VITE_DOMAIN_NAME || "nodomain.space";
+    const domain = import.meta.env.VITE_DOMAIN_NAME || "odos1.citydata.in.th";
     const response = await Axios.get(
       `https://${domain}:8443/TechScore/${studentID}`
     );
