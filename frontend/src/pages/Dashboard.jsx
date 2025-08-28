@@ -1,11 +1,18 @@
 import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/Footer";
-import NavbarDashboard from "../components/NavbarDashboard";
-import NavbarTH from "../components/NavbarTH";
+// import Footer from "../components/Footer";
+// import NavbarDashboard from "../components/NavbarDashboard";
+// import NavbarTH from "../components/NavbarTH";
+import NavbarUnified from "../components/UnifiedNavbar";
+import { useState } from "react";
+import FooterCombined from "../components/FooterCombined";
+
 function Dashboard() {
+    const [language, setLanguage] = useState("TH");
     return (
         <div className="LINESeed">
-            <NavbarTH />
+            {/* <NavbarTH /> */}
+            <NavbarUnified language={language} setLanguage={setLanguage} />
+
             <br />
             <br />
             <div className="h-screen flex items-center justify-center p-10">
@@ -25,7 +32,8 @@ function Dashboard() {
             </div>
             <ScrollToTop />
             <div className="flex flex-col">
-                <Footer />
+                {/* <Footer /> */}
+                <FooterCombined lang="th" />
             </div>
         </div>
     );

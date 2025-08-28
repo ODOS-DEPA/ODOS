@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
-import Footer from "../components/FooterTH";
-import NavbarTH from "../components/NavbarTH";
+import { useState } from "react";
+import NavbarUnified from "../components/UnifiedNavbar";
+import FooterCombined from "../components/FooterCombined";
 
 /**
  * Renders the "Test Preparation" section.
@@ -209,9 +210,12 @@ const otherSectionsData = [
 
 // --- Main Component ---
 function InfoTH() {
-    return (
+  const [language, setLanguage] = useState("TH");
+  return (
       <div className="LINESeed">
-        <NavbarTH />
+        {/* <NavbarTH /> */}
+        <NavbarUnified language={language} setLanguage={setLanguage} />
+
         <ScrollToTop />
         
         <div>
@@ -254,7 +258,7 @@ function InfoTH() {
   
             <br />
             <div className="flex flex-col">
-              <Footer />
+              <FooterCombined lang="th" />
             </div>
           </div>
         </div>

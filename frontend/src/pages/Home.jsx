@@ -1,36 +1,51 @@
-// import React from "react";
-// import Timeline from "../components/Timeline";
-// import Region from "../components/Region";
-// import Button from "../components/Button";
-// import Declaration from "../components/Declaration";
+import { Routes, Route } from "react-router-dom";
+import Timeline from "../components/Timeline";
+import ScrollToTop from "../components/ScrollToTop";
+import Region from "../components/Region";
+import Declaration from "../components/Declaration";
+import Checkstatus from "../pages/Checkstatus";
+import NavbarUnified from "../components/UnifiedNavbar";
+import { useState } from "react";
+import FooterCombined from "../components/FooterCombined";
 
-// function Home() {
-//   return (
-//     <div className="LINESeed">
-//       <div>
-//         <img src="/images/homepage_sec1_en.jpg" alt="" />
-//       </div>
-//       <div>
-//         <img src="/images/homepage_sec2_en.jpg" alt="" />
-//       </div>
-//       <div className="flex flex-col justify-center items-center">
-//         <Region />
-//         <img src="/images/Section 3 - 4 EN.jpg" alt="" />
-//         <Button />
-//         <br />
-//         <br />
-//       </div>
-//       <div className="flex flex-col">
-//         <Declaration />
-//       </div>
-//       <div className="flex flex-col">
-//         <Timeline />
-//       </div>
-//       <div>
-//         <img src="/images/ODOS Website_EN_Section 7 Partner.jpg" alt="" />
-//       </div>
-//     </div>
-//   );
-// }
 
-// export default Home;
+function Home() {
+  const [language, setLanguage] = useState("EN");
+  return (
+    <div className="LINESeed">
+      <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
+
+      <ScrollToTop />
+      <div>
+        <img src="/images/homepage_sec1_banner_en.jpg" alt="" />
+      </div>
+      <div>
+        <img src="/images/homepage_sec2_en.jpg" alt="" />
+      </div>
+      <div className="flex flex-col justify-center items-center">
+        {/* <br />
+        <br /> */}
+        <Region />
+              <img src="/images/homepage_sec3_en.jpg" alt="" />
+        {/* <Button /> */}
+        <br />
+        <br />
+      </div>
+      <div className="flex flex-col">
+        <Declaration lang="en" />
+      </div>
+      <div className="flex flex-col">
+        <Timeline lang="en"/>
+      </div>
+          <div>
+              <img src="/images/homepage_sec5_partners_en.jpg" alt="" /> 
+      </div>
+      <div className="flex flex-col">
+
+        <FooterCombined lang="en" />
+      </div>
+    </div>
+  );
+}
+
+export default Home;

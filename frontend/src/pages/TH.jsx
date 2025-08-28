@@ -1,21 +1,20 @@
-import React from "react";
-// import { Link } from "react-router-dom";
-import NavbarTH from "../components/NavbarTH";
-import FooterTH from "../components/FooterTH";
-import TimelineTH from "../components/TimelineTH";
+import { useState } from "react";
+import Timeline from "../components/Timeline";
 import ScrollToTop from "../components/ScrollToTop";
 import Region from "../components/Region";
-// import Button from "../components/Button";
-import DeclarationTH from "../components/DeclareTH";
+import Declaration from "../components/Declaration";
+import NavbarUnified from "../components/UnifiedNavbar";
+import FooterCombined from "../components/FooterCombined";
 
 function TH() {
+    const [language, setLanguage] = useState("TH");
+
     return (
 
         <div className="LINESeed">
 
-
-
-            <NavbarTH />
+            {/* <NavbarTH /> */}
+            <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
             <ScrollToTop />
             <div>
                 {/* <img src="/images/ODOS Website_Detail_Section 1.jpg" alt="" /> */}
@@ -37,10 +36,10 @@ function TH() {
                 <br />
             </div>
             <div className="flex flex-col">
-                <DeclarationTH />
+                <Declaration lang="th" />
             </div>
             <div className="flex flex-col">
-                <TimelineTH />
+                <Timeline lang="th"/>
             </div>
             <div>
                 <img src="/images/homepage_sec5_partners_th.jpg" alt="" />
@@ -49,10 +48,8 @@ function TH() {
             <div className="flex flex-col">
 
 
-                <FooterTH />
-            
-
-
+                {/* <FooterTH /> */}
+                <FooterCombined lang="th" />
             </div>
         </div>
     );
