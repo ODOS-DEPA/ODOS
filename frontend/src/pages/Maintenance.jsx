@@ -17,7 +17,7 @@ function Maintenance({ lang = "en" }) {
 
       <ScrollToTop />
       <div
-        className="h-screen w-screen bg-cover bg-center"
+        className="h-[50vh] sm:h-[70vh] md:h-screen w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${selectedImage})` }}
       />
     </div>
