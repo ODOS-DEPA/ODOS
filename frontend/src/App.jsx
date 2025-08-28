@@ -14,14 +14,14 @@ import Announcement from "./pages/Announcement.jsx";
 import RandomInfoTH from "./pages/RandomSlot_TH.jsx";
 import Home from "./pages/Home.jsx";
 
-var targetSite = import.meta.env.VITE_DOMAIN_NAME_REGISTER_FORM || "https://www.google.com/";
+// var targetSite = import.meta.env.VITE_DOMAIN_NAME_REGISTER_FORM || "https://www.google.com/";
 
-const DocSubmittedRedirect = () => {
-  useEffect(() => {
-    window.location.href = targetSite;
-  }, []);
-  return null;
-};
+// const DocSubmittedRedirect = () => {
+//   useEffect(() => {
+//     window.location.href = targetSite;
+//   }, []);
+//   return null;
+// };
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
         {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
         {/* <Route path="/Announcement" element={<Announcement />} /> */}
         {/* <Route path="/Info2TH" element={<RandomInfoTH />} /> */}
-        <Route path="/odosform" element={<DocSubmittedRedirect />} />
+        {/* <Route path="/odosform" element={<DocSubmittedRedirect />} /> */}
         <Route path="/check-status" element={<Checkstatus />} />
       </Routes>
     </Router>
