@@ -1,29 +1,35 @@
 import React from "react";
 
-function Button() {
+function Button({
+  imageSrc = "/images/homepage_sec3_en.jpg",
+  link = "https://dg.th/kw6uzvdo57",
+  lang = "en", // add lang prop
+}) {
+  const isThai = lang === "th";
+  const buttonText = isThai
+    ? "สมัครผ่าน แอปฯ 'ทางรัฐ'"
+    : "Apply via 'Thang Rath' App";
+
   return (
-    <div>
+    <div className="relative w-full max-w mx-auto">
+      {/* Background image */}
       <img
-        // src="/images/odos_open_en.png"
-        alt=""
+        src={imageSrc}
+        alt="banner"
         className="w-full h-full object-cover"
       />
-      {/* <a
-        href="https://xn--72cst3czdd.com/"
-        target="_blank"
-        className="absolute left-1/2 transform -translate-x-1/2 bottom-20 bg-[#FFF200] text-white rounded-lg shadow-lg px-3 py-1.5 sm:px-6 sm:py-3 text-sm sm:text-3xl"
-      >
-        Start your application
-      </a> */}
+
+      {/* Overlay button */}
       <a
-        href="https://dg.th/kw6uzvdo57"
+        href={link}
         target="_blank"
-        className="my-2 bg-[#FFF200] text-black font-bold rounded-lg shadow-lg px-7 py-1 s  m:px-6 sm:py-2 text-base sm:text-2xl text-center"
+        rel="noopener noreferrer"
+        className="absolute bottom-4 sm:bottom-[12%] left-1/2 -translate-x-1/2 
+        my-2 bg-[#FFF200] text-black font-bold rounded-lg shadow-lg
+        w-80 py-2 sm:py-3 text-base sm:text-2xl text-center hover:bg-yellow-300 transition"
       >
-        Start your application
+        {buttonText}
       </a>
-
-
     </div>
   );
 }

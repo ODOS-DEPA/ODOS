@@ -7,6 +7,7 @@ import Checkstatus from "../pages/Checkstatus";
 import NavbarUnified from "../components/UnifiedNavbar";
 import { useState } from "react";
 import FooterCombined from "../components/FooterCombined";
+import Button from "../components/Button";
 
 
 function Home() {
@@ -23,11 +24,9 @@ function Home() {
         <img src="/images/homepage_sec2_en.jpg" alt="" />
       </div>
       <div className="flex flex-col justify-center items-center">
-        {/* <br />
-        <br /> */}
-        {/* <Region /> */}
-              <img src="/images/homepage_sec3_en.jpg" alt="" />
-        {/* <Button /> */}
+
+              {/* <img src="/images/homepage_sec3_en.jpg" alt="" /> */}
+        <Button lang='en' />
         <br />
         <br />
       </div>

@@ -5,6 +5,7 @@ import Region from "../components/Region";
 import Declaration from "../components/Declaration";
 import NavbarUnified from "../components/UnifiedNavbar";
 import FooterCombined from "../components/FooterCombined";
+import Button from "../components/Button";
 
 function TH() {
     const [language, setLanguage] = useState("TH");
@@ -25,14 +26,9 @@ function TH() {
             </div>
 
             <div className="flex flex-col justify-center items-center">
-                
-                
-                {/* <br />
-                <br /> */}
-                {/* <Region /> */}
-                <img src="/images/homepage_sec3_th.jpg" alt="" />
-                {/* <Button /> */}
-                <br />
+
+                <Button lang="th" />
+
                 <br />
             </div>
             <div className="flex flex-col">
