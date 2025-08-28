@@ -29,7 +29,7 @@ function TH() {
                 
                 {/* <br />
                 <br /> */}
-                <Region />
+                {/* <Region /> */}
                 <img src="/images/homepage_sec3_th.jpg" alt="" />
                 {/* <Button /> */}
                 <br />

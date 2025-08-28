@@ -25,7 +25,7 @@ function Home() {
       <div className="flex flex-col justify-center items-center">
         {/* <br />
         <br /> */}
-        <Region />
+        {/* <Region /> */}
               <img src="/images/homepage_sec3_en.jpg" alt="" />
         {/* <Button /> */}
         <br />
