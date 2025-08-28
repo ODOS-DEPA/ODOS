@@ -1,34 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
-function Maintenance() {
+
+import MaintenanceImageEN from '/images/Maintenance_en.jpg';
+import MaintenanceImageTH from '/images/Maintenance_th.jpg';
+import NavbarUnified from "../components/UnifiedNavbar";
+import { useState } from "react";
+import ScrollToTop from "../components/ScrollToTop";
+
+
+function Maintenance({ lang = "en" }) {
+  const selectedImage = lang === 'th' ? MaintenanceImageTH : MaintenanceImageEN;
+  
+  const [language, setLanguage] = useState("EN");
   return (
-    <div>
-      <div className="bg-gray-900 h-screen flex items-center justify-center text-white">
-        <div className="text-center space-y-4">
-          <h1 className="text-6xl font-bold ">We’ll Be Back Soon!</h1>
-          <p className="text-xl">
-            Sorry for the inconvenience but we&rsquo;re performing some
-            maintenance at the moment.
-          </p>
-          <p className="text-xl">
-            {/* Coming Soon on <span className="text-[#869bd4]">1 March 2025</span> */}
-          </p>
+    <div className="LINESeed">
+      <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
 
-          {/* <button
-          onClick={() => (window.location.href = "/")}
-          className="mt-6 bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition"
-        >
-          ⬅ Back to Home
-        </button> */}
-
-        <Link to="/">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition">
-          ⬅ Back to Home
-          </button>
-        </Link>
-
-        </div>
-      </div>
+      <ScrollToTop />
+      <div
+        className="h-screen w-screen bg-cover bg-center"
+        style={{ backgroundImage: `url(${selectedImage})` }}
+      />
     </div>
   );
 }

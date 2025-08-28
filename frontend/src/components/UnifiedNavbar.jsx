@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-const tab_nav =  {
+
+const maintenanceMode = true;
+
+const tab_nav_all =  {
     TH: [
       { to: "/", label: "Home" },
       { to: "/InfoTH", label: "Information" },
@@ -19,6 +22,13 @@ const tab_nav =  {
     //   { to: "/Announcement", label: "Announcement" },
     ],
   }
+
+const tab_nav = Object.fromEntries(
+  Object.entries(tab_nav_all).map(([lang, tabs]) => [
+    lang,
+    maintenanceMode ? tabs.filter(tab => tab.label === "Home") : tabs
+  ])
+);
 
 const menuConfig = {
 

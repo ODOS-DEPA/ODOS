@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Checkstatus from "./pages/Checkstatus.jsx";
 import Captcha from "./pages/Captcha.jsx";
-import Maintenance from "./pages/Maintenance.jsx";
 import TH from "./pages/TH.jsx";
 import Information from "./pages/infoEN.jsx";
 import InfoTH from "./pages/infoTH.jsx";
@@ -13,6 +12,7 @@ import Dashboard from "./pages/Dashboard.jsx";
 import Announcement from "./pages/Announcement.jsx";
 import RandomInfoTH from "./pages/RandomSlot_TH.jsx";
 import Home from "./pages/Home.jsx";
+import Maintenance from './pages/Maintenance.jsx';
 
 // var targetSite = import.meta.env.VITE_DOMAIN_NAME_REGISTER_FORM || "https://www.google.com/";
 
@@ -23,23 +23,28 @@ import Home from "./pages/Home.jsx";
 //   return null;
 // };
 
+export let maintenanceMode = true;
+
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/EN" element={<Home />} />
-        <Route path="/" element={<TH />} />
-        <Route path="/Maintenance" element={<Maintenance />} />
-        <Route path="/Information" element={<Information />} />
-        <Route path="/infoTH" element={<InfoTH />} />
-        <Route path="/qaTH" element={<QaTH />} />
-        <Route path="/qaEN" element={<QaEN />} />
-  
-        {/* <Route path="/Dashboard" element={<Dashboard />} /> */}
-        {/* <Route path="/Announcement" element={<Announcement />} /> */}
-        {/* <Route path="/Info2TH" element={<RandomInfoTH />} /> */}
-        {/* <Route path="/odosform" element={<DocSubmittedRedirect />} /> */}
-        <Route path="/check-status" element={<Checkstatus />} />
+        {maintenanceMode ? (
+          // When ON, every route shows Maintenance
+          <Route path="*" element={<Maintenance />} />
+        ) : (
+          // When OFF, normal routes work
+          <>
+            <Route path="/EN" element={<Home />} />
+            <Route path="/" element={<TH />} />
+            <Route path="/Information" element={<Information />} />
+            <Route path="/infoTH" element={<InfoTH />} />
+            <Route path="/qaTH" element={<QaTH />} />
+            <Route path="/qaEN" element={<QaEN />} />
+            <Route path="/check-status" element={<Checkstatus />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </>
+        )}
       </Routes>
     </Router>
   );
