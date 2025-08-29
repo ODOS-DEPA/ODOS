@@ -14,25 +14,17 @@ import RandomInfoTH from "./pages/RandomSlot_TH.jsx";
 import Home from "./pages/Home.jsx";
 import Maintenance from './pages/Maintenance.jsx';
 
-// var targetSite = import.meta.env.VITE_DOMAIN_NAME_REGISTER_FORM || "https://www.google.com/";
 
-// const DocSubmittedRedirect = () => {
-//   useEffect(() => {
-//     window.location.href = targetSite;
-//   }, []);
-//   return null;
-// };
-
-export let maintenanceMode = true;
+let maintenanceMode = Boolean(Number(import.meta.env.VITE_IS_MAINTANENCE || "0"))
 
 function App() {
   return (
     <Router>
       <Routes>
-        {maintenanceMode ? (
+        {maintenanceMode ? 
           // When ON, every route shows Maintenance
           <Route path="*" element={<Maintenance />} />
-        ) : (
+        : 
           // When OFF, normal routes work
           <>
             <Route path="/EN" element={<Home />} />
@@ -42,9 +34,8 @@ function App() {
             <Route path="/qaTH" element={<QaTH />} />
             <Route path="/qaEN" element={<QaEN />} />
             <Route path="/check-status" element={<Checkstatus />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
           </>
-        )}
+        }
       </Routes>
     </Router>
   );

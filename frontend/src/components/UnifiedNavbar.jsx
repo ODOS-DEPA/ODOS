@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
-const maintenanceMode = true;
+let maintenanceMode = Boolean(Number(import.meta.env.VITE_IS_MAINTANENCE || "0"));
 
 const tab_nav_all =  {
     TH: [
