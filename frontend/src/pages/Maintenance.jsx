@@ -5,6 +5,7 @@ import MaintenanceImageTH from '/images/Maintenance_th.jpg';
 import NavbarUnified from "../components/UnifiedNavbar";
 import { useState } from "react";
 import ScrollToTop from "../components/ScrollToTop";
+import FootCombined from "../components/FooterCombined";
 
 
 function Maintenance({ lang = "en" }) {
@@ -20,6 +21,7 @@ function Maintenance({ lang = "en" }) {
         className="h-[50vh] sm:h-[70vh] md:h-screen w-full bg-cover bg-center"
         style={{ backgroundImage: `url(${selectedImage})` }}
       />
+    <FootCombined lang='en'/>
     </div>
   );
 }
