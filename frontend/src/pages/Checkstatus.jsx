@@ -40,7 +40,7 @@ const Checkstatus = () => {
         {hasSearched && !isLoading && result && (
           <>
             {/* <ProgressSteps status={result.Status || "รอการพิจารณา"} /> */}
-            <ProgressSteps status={"รอการพิจารณา"} />
+            <ProgressSteps result={result} />
             <ResultTable result={result} />
           </>
         )}
