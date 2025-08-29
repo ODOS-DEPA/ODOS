@@ -15,13 +15,17 @@ function Maintenance({ lang = "en" }) {
   return (
     <div className="LINESeed">
       <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
-
+      
       <ScrollToTop />
-      <div
-        className="h-[50vh] sm:h-[70vh] md:h-screen w-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${selectedImage})` }}
-      />
-    <FootCombined lang='en'/>
+      <div className="bg-[#2c2c2c] flex flex-col px-4 py-0">
+        <div className="flex flex-row items-center justify-between">
+          <img
+            src={selectedImage}
+          />
+        </div>
+
+        <FootCombined lang={language} />
+      </div>
     </div>
   );
 }

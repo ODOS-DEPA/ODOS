@@ -14,7 +14,7 @@ function FooterCombined({ lang = "en" }) {
           className="sm:w-[250px] sm:h-[250px]"
         />
         {/* Flag Counter */}
-        <div className="flex justify-center my-4">
+        {/* <div className="flex justify-center my-4">
           <a href="https://info.flagcounter.com/LeL4">
             <img
               src="https://s01.flagcounter.com/count2/LeL4/bg_2C2C2C/txt_FFFFFF/border_2C2C2C/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
@@ -22,7 +22,7 @@ function FooterCombined({ lang = "en" }) {
               border="0"
             />
           </a>
-        </div>
+        </div> */}
       </div>
 
       {/* Row 2: Address */}
