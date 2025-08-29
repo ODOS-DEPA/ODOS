@@ -7,6 +7,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import Region from "../components/Region";
 import Button from "../components/Button";
 import DeclarationTH from "../components/DeclareTH";
+import YoutubeEmbed from "../components/YoutubeEmbed";
 
 function TH() {
     return (
@@ -17,6 +18,7 @@ function TH() {
 
             <NavbarTH />
             <ScrollToTop />
+            {/* <YoutubeEmbed embedId="Z6IFOUDB4oA" /> */}
             <div>
                 {/* <img src="/images/ODOS Website_Detail_Section 1.jpg" alt="" /> */}
                 <img src="/images/Section 1-th.jpg" alt="" />

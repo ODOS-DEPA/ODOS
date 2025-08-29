@@ -8,12 +8,17 @@ import Button from "./components/Button";
 import Declaration from "./components/Declaration";
 import Checkstatus from "./pages/Checkstatus";
 import NavbarTH from "./components/NavbarTH"
-// สร้าง Home component สำหรับหน้าแรก
+import YoutubeEmbed from "./components/YoutubeEmbed";
+import SimpleCard  from "./components/news-slide";
+
 function Home() {
   return (
     <div className="LINESeed">
       <NavbarTH />
+      {/* <YoutubeEmbed embedId="Z6IFOUDB4oA" /> */}
       <ScrollToTop />
+      {/* <SimpleCard /> */}
+
       <div>
         {/* <img src="/images/Section1.png" alt="" /> */}
         <img src="/images/Section 1-en.jpg" alt="" />
