@@ -29,7 +29,8 @@ function App() {
           <>
             <Route path="/EN" element={<Home />} />
             <Route path="/" element={<TH />} />
-            <Route path="/Information" element={<Information />} />
+            {/* <Route path="/Information" element={<Information />} /> */} // no eng info yet
+            <Route path="/Information" element={<InfoTH />} />
             <Route path="/infoTH" element={<InfoTH />} />
             <Route path="/qaTH" element={<QaTH />} />
             <Route path="/qaEN" element={<QaEN />} />

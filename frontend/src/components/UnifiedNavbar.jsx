@@ -8,7 +8,7 @@ const tab_nav_all =  {
     TH: [
       { to: "/", label: "Home" },
       { to: "/InfoTH", label: "Information" },
-      { to: "/qaTH", label: "Q&A" },
+      // { to: "/qaTH", label: "Q&A" },
       // { to: "/check-status", label: "Check Status" }
     //   { to: "/Dashboard", label: "Dashboard" },
     //   { to: "/Announcement", label: "Announcement" },
@@ -16,7 +16,7 @@ const tab_nav_all =  {
     EN: [
       { to: "/EN", label: "Home" },
       { to: "/Information", label: "Information" },
-      { to: "/qaEN", label: "Q&A" },
+      // { to: "/qaEN", label: "Q&A" },
       // { to: "/check-status", label: "Check Status" }
     //   { to: "/Dashboard", label: "Dashboard" },
     //   { to: "/Announcement", label: "Announcement" },
@@ -104,7 +104,7 @@ function NavbarUnified({ language = "TH", setLanguage, context = "main" }) {
                 {item.label}
               </Link>
             ))}
-            <a href={import.meta.env.VITE_DOMAIN_NAME_REDIRECT} className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS Batch#1</a>
+            <a href={import.meta.env.VITE_DOMAIN_NAME_REDIRECT} className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">Class of 2025</a>
           </div>
           <div className="text-[10px] sm:text-[11px] lg:text-[12px] xl:text-[13px]">
             <button onClick={() => handleLanguageSwitch("EN")} className="hover:text-gray-600 transition-colors">EN</button>
@@ -123,7 +123,7 @@ function NavbarUnified({ language = "TH", setLanguage, context = "main" }) {
                 {item.label}
               </Link>
             ))}
-            <a href={import.meta.env.VITE_DOMAIN_NAME_REDIRECT} className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">ODOS Batch#1</a>
+            <a href={import.meta.env.VITE_DOMAIN_NAME_REDIRECT} className="hover:text-gray-600 transition-colors whitespace-nowrap" target="_blank" rel="noopener noreferrer">Class of 2025</a>
           </div>
           <div className="text-[12px] pt-3 border-t border-gray-300">
             <button onClick={() => { setIsMenuOpen(false); handleLanguageSwitch("EN"); }} className="hover:text-gray-600 transition-colors">EN</button>
