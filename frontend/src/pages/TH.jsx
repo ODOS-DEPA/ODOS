@@ -19,7 +19,7 @@ function TH() {
             <ScrollToTop />
             <div>
                 {/* <img src="/images/ODOS Website_Detail_Section 1.jpg" alt="" /> */}
-                <img src="/images/homepage_sec1_banner_th.jpg" alt="" />
+                <img src="/images/homepage_sec1_banner_th.jpg?v=1" alt="" />
             </div>
             <div>
                 <img src="/images/homepage_sec2_th.jpg" alt="" />

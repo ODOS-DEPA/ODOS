@@ -1,7 +1,8 @@
 import React from "react";
 
 function Button({
-  imageSrc = "/images/homepage_sec3_en.jpg",
+  imageSrcEN = "/images/homepage_sec3_en.jpg",
+  imageSrcTH = "/images/homepage_sec3_th.jpg",
   link = "https://dg.th/kw6uzvdo57",
   lang = "en", // add lang prop
 }) {
@@ -14,7 +15,7 @@ function Button({
     <div className="relative w-full max-w mx-auto">
       {/* Background image */}
       <img
-        src={imageSrc}
+        src={isThai ? imageSrcTH : imageSrcEN}
         alt="banner"
         className="w-full h-full object-cover"
       />
