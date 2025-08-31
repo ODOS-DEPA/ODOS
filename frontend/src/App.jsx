@@ -29,12 +29,13 @@ function App() {
           <>
             <Route path="/" element={<TH />} />
             <Route path="/EN" element={<Home />} />
-            {/* <Route path="/Information" element={<Information />} /> */} // no eng info yet
+            {/* // no eng info yet */}
+            {/* <Route path="/Information" element={<Information />} /> */} 
             <Route path="/Information" element={<InfoTH />} />
             <Route path="/infoTH" element={<InfoTH />} />
             {/* <Route path="/qaTH" element={<QaTH />} /> */}
             {/* <Route path="/qaEN" element={<QaEN />} /> */}
-            {/* <Route path="/check-status" element={<Checkstatus />} /> */}
+            <Route path="/check-status" element={<Checkstatus />} />
           </>
         }
       </Routes>
