@@ -18,7 +18,6 @@ function TH() {
             <NavbarUnified language={language} setLanguage={setLanguage} context="main" />
             <ScrollToTop />
             <div>
-                {/* <img src="/images/ODOS Website_Detail_Section 1.jpg" alt="" /> */}
                 <img src="/images/homepage_sec1_banner_th.jpg?v=1" alt="" />
             </div>
             <div>
