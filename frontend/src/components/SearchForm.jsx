@@ -52,7 +52,7 @@ const SearchForm = ({ setResult, setError, setIsLoading, setHasSearched, isLoadi
         setResult(null);
       }
     } catch (err) {
-      setError("ข้อมูลที่ใส่ไม่ถูกต้อง โปรดตรวจสอบและลองใหม่อีกครั้ง");
+      setError("ไม่มีข้อมูลของผู้สมัคร หรือกำลังทำการตรวจสอบ");
       setResult(null);
     } finally {
       setIsLoading(false);

@@ -40,7 +40,7 @@ export default function Stage3Tag_ENG_TEST({ StudentID, headers, colorTag }) {
   return (
     <div>
       <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
-        ข้อมูลสำหรับการสอบทักษะภาษาอังกฤษ
+        ข้อมูลสำหรับการทดสอบทักษะภาษาอังกฤษ
       </h3>
       <div className="overflow-x-auto shadow-lg rounded-lg -mx-2 sm:mx-0 mb-6">
         <div className="min-w-[800px] sm:min-w-0">

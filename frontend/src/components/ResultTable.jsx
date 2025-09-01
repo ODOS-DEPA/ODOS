@@ -12,7 +12,7 @@ const ResultTable = ({ result }) => {
     <div className="mt-4 sm:mt-8 space-y-4 sm:space-y-8 px-2 sm:px-0">
       <RefreshPages/>
     </div> 
-    {
+    { 
       (() => {
         switch (result.currentStatus) {
           case "1":

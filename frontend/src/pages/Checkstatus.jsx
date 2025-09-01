@@ -32,7 +32,7 @@ const Checkstatus = () => {
 
         {/* error message */}
         {error && <p className="mt-4 text-red-600">{error}</p>}
-        {/* {console.log(result)} */}
+    
         {/* loading */}
         {isLoading && <p className="mt-4 text-gray-600">กำลังโหลด...</p>}
 
@@ -46,9 +46,20 @@ const Checkstatus = () => {
         )}
 
         {/* not found */}
-        {hasSearched && !isLoading && !result && (
-          <p className="mt-4 text-gray-600">ไม่พบข้อมูลที่ตรงกัน</p>
-        )}
+              {hasSearched && !isLoading && !result && (
+                error === "รหัสตรวจสอบไม่ถูกต้อง" ? 
+                  <p></p>
+                 : 
+                  error === "กรุณากรอกรหัสผู้สมัครที่ถูกต้อง (ตัว S ตามด้วยตัวเลข)" ?
+                  <p></p>
+                 :
+                  error ==="กรุณากรอกรหัสยืนยัน 11 หลักให้ถูกต้อง" ?
+                  <p></p>
+                 :
+                 <p className="mt-4 text-gray-600">
+                    หากท่านยังไม่ได้ทำการสมัคร กรุณาสมัครผ่าน แอปพลิเคชั่น ทางรัฐ
+                 </p>                
+              )}
       </div>
     </div>
   );

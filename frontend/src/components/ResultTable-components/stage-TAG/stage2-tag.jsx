@@ -7,7 +7,7 @@ export default function Stage2Tag({headers , rowData, colorTag}){
             
         <div>
             <h3 className="text-lg sm:text-xl font-semibold text-[#1a365d] mb-3 sm:mb-4 font-sukhumvit px-2 sm:px-0">
-                การคัดเลือกรอบที่ 2 ( Estimate 1 Oct 2025 )
+                ประกาศผลผู้ผ่านการคัดเลือกรอบที่ 1
             </h3>
             <div className="overflow-x-auto shadow-lg rounded-lg -mx-2 sm:mx-0 mb-6">
                 <div className="min-w-[800px] sm:min-w-0">
