@@ -22,11 +22,13 @@ function Region() {
             name: "North America",
             countries: [
                 { code: "USA", images: ["/images/programes/Slide16.JPG"] },
+                { code: "Canada", images: ["/images/programes/Slide17.JPG"] }, // place holder
             ],
         },
         {
             name: "Europe",
             countries: [
+                { code: "Austria", images: ["/images/programes/Slide18.JPG"] },
                 { code: "UK", images: ["/images/programes/Slide13.JPG", "/images/programes/Slide14.JPG", "/images/programes/Slide15.JPG"] },
                 { code: "Finland", images: ["/images/programes/Slide7.JPG", "/images/programes/Slide8.JPG"] },
                 { code: "Estonia", images: ["/images/programes/Slide6.JPG"] },
@@ -36,6 +38,7 @@ function Region() {
             name: "Australia",
             countries: [
                 { code: "Australia", images: ["/images/programes/Slide1.JPG"] },
+                { code: "New Zealand", images: ["/images/programes/Slide19.JPG"] }
             ],
         },
         {
@@ -43,7 +46,7 @@ function Region() {
             countries: [
                 { code: "China", images: ["/images/programes/Slide2.JPG", "/images/programes/Slide3.JPG", "/images/programes/Slide4.JPG", "/images/programes/Slide5.JPG"] },
                 { code: "Japan", images: ["/images/programes/Slide9.JPG", "/images/programes/Slide10.JPG"] },
-                { code: "Korea", images: ["/images/programes/Slide12.JPG"] },
+                { code: "South Korea", images: ["/images/programes/Slide12.JPG"] },
                 { code: "Singapore", images: ["/images/programes/Slide11.JPG"] },
             ],
         },
