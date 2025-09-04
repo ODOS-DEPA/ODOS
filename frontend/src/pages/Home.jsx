@@ -22,6 +22,8 @@ function Home() {
       </div>
       <div>
         <img src="/images/homepage_sec2_en.jpg" alt="" />
+        {/* <img src="/images/homepage_sec2_en_noRegion.jpg" alt="" /> */}
+        {/* <Region /> */}
       </div>
       <div className="flex flex-col justify-center items-center">
 

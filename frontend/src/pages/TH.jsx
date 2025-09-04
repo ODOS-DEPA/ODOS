@@ -22,6 +22,8 @@ function TH() {
             </div>
             <div>
                 <img src="/images/homepage_sec2_th.jpg" alt="" />
+                {/* <img src="/images/homepage_sec2_th_noRegion.jpg" alt="" /> */}
+                {/* <Region /> */}
             </div>
 
             <div className="flex flex-col justify-center items-center">
